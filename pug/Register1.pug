@@ -1,0 +1,48 @@
+h3.text-center What are we interested in focusing on?
+.form-check
+    input#exercises_nutrition.form-check-input(type='radio', name='flexRadioDefault')
+    label.form-check-label(for='exercises_nutrition')
+        .label-body 
+            h4 Exercises and Nutrition
+            p Ready to commit to an exercise and nutrition program appropriate to your goal and time
+        .label-image 
+            include svg/Body.svg
+.form-check
+    input#exercises.form-check-input(type='radio', name='flexRadioDefault')
+    label.form-check-label(for='exercises')
+        .label-body 
+            h4 Exercise Program
+            p You are interested in taking a detailed exercise program based on your routine and needs
+        .label-image 
+            include svg/dumbbells.svg
+.form-check
+    input#nutrition.form-check-input(type='radio', name='flexRadioDefault', )
+    label.form-check-label(for='nutrition')
+        .label-body 
+            h4 Nutrition Program
+            p I don't have a lot of time to exercise and need a proper diet for you
+        .label-image 
+            include svg/svgexport-1077 (7).svg
+.event.text-center
+    //-a.btn.text-center.mx-3.btn-white(href="", data-value="login") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register2.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

@@ -1,0 +1,44 @@
+
+<h3 class="text-center">Do you prefer easy-to-order meals from the restaurant?</h3>
+<div class="form-check">
+  <input class="form-check-input" id="easyOrderYes" type="radio" name="easy-to-order"/>
+  <label class="form-check-label" for="easyOrderYes">
+    <div class="label-body"> 
+      <h4>Yes </h4>
+      <p>I don't have time to prepare meals</p>
+    </div>
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" id="easyOrderNo" type="radio" name="easy-to-order"/>
+  <label class="form-check-label" for="easyOrderNo">
+    <div class="label-body"> 
+      <h4>No </h4>
+      <p>I have enough time to prepare my meals</p>
+    </div>
+  </label>
+</div>
+<div class="event text-center" style="position: relative;bottom: unset;"><a class="btn text-center mx-3 btn-white" data-value="food3.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="food5.html">Next</a></div>
+<script src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/Main.js"> </script>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+          var DataValue = $(this).attr('data-value');
+          //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+          $('#Register_module').load(DataValue);
+      //- console.log(DataValue);
+  
+      });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

@@ -1,0 +1,40 @@
+h3.text-center Do you prefer easy-to-order meals from the restaurant?
+.form-check
+    input#easyOrderYes.form-check-input(type='radio', name='easy-to-order')
+    label.form-check-label(for='easyOrderYes')
+        .label-body 
+            h4 Yes 
+            p I don't have time to prepare meals
+        
+.form-check
+    input#easyOrderNo.form-check-input(type='radio', name='easy-to-order')
+    label.form-check-label(for='easyOrderNo')
+        .label-body 
+            h4 No 
+            p I have enough time to prepare my meals
+        
+
+        
+.event.text-center(style="position: relative;bottom: unset;")
+    a.btn.text-center.mx-3.btn-white( data-value="food3.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="food5.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

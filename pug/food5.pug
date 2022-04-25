@@ -1,0 +1,51 @@
+h3.text-center Do you prefer to eat a meal every day?
+.form-check
+    input#ThreeMeals2snacks.form-check-input(type='radio', name='mealDay')
+    label.form-check-label(for='ThreeMeals2snacks')
+        .label-body 
+            div Three meals and two snacks 
+        
+.form-check
+    input#ThreeMealsSsnacks.form-check-input(type='radio', name='mealDay')
+    label.form-check-label(for='ThreeMealsSsnacks')
+        .label-body.w-100
+            .d-flex.justify-content-between.w-100
+                span Three meals and snacks 
+                span.badge.bg-success The best
+.form-check
+    input#ThreeMeals.form-check-input(type='radio', name='mealDay')
+    label.form-check-label(for='ThreeMeals')
+        .label-body 
+            div Breakfast, lunch and dinner
+        
+.form-check
+    input#intermittentFasting.form-check-input(type='radio', name='mealDay')
+    label.form-check-label(for='intermittentFasting')
+        .label-body 
+            div Two meals and a snack (intermittent fasting) 
+        
+
+        
+.event.text-center(style="position: relative;bottom: unset;")
+    a.btn.text-center.mx-3.btn-white( data-value="food4.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="food6.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

@@ -1,0 +1,64 @@
+
+h5.text-center Do you want to use supplements?
+.d-flex.flex-wrap.justify-content-center.mb-4
+    .form-check.gender.mx-4
+        input#supplementsYes.form-check-input(type='radio', name='supplements')
+        label.form-check-label(for='supplementsYes')
+            .label-body 
+                div Yes
+    .form-check.gender.mx-4
+        input#supplementsNo.form-check-input(type='radio', name='supplements')
+        label.form-check-label(for='supplementsNo')
+            .label-body 
+                div No
+    
+h5.text-center Do you have a physical limit to supplement use
+.d-flex.flex-wrap.justify-content-center.mb-4
+    .form-check.gender.mx-1
+        input#financialproblems.form-check-input(type='radio', name='limitsupplements')
+        label.form-check-label(for='financialproblems')
+            .label-body 
+                div Yes, I have financial problems
+    .form-check.gender.mx-1
+        input#nofinancialproblems.form-check-input(type='radio', name='limitsupplements')
+        label.form-check-label(for='nofinancialproblems')
+            .label-body 
+                div I have no financial problems
+    
+h5.text-center Do you already have any supplements?
+.d-flex.flex-wrap.justify-content-center.mb-1
+    .form-check.gender.mx-4
+        input#financialproblems.form-check-input(type='radio', name='limitsupplements')
+        label.form-check-label(for='financialproblems')
+            .label-body 
+                div Yes
+    .form-check.gender.mx-4
+        input#nofinancialproblems.form-check-input(type='radio', name='limitsupplements')
+        label.form-check-label(for='nofinancialproblems')
+            .label-body 
+                div No
+.mb-3
+    input.form-control(type='text', placeholder='What are the supplements?')       
+.event.text-center(style="position: relative;bottom: unset;")
+    a.btn.text-center.mx-3.btn-white( data-value="food6.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="food9.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

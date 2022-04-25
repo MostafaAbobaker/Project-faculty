@@ -1,0 +1,66 @@
+aside.aside-bar-fixed {
+    position: fixed;
+    top: 35%;
+    inset-inline-end: 0;
+    background-color: $Color-White;
+    box-shadow: -5px 0 5px rgba(#000, 0.2);
+    width: 70px;
+    border-start-start-radius: 7px;
+    border-end-start-radius: 7px;
+    overflow: hidden;
+    ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        width: 100%;
+        li {
+            width: 100%;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 5px;
+                transition: all 0.4s ease-in-out;
+                img {
+                    width: 50px;
+                    height: 50px;
+                    display: inline-block;
+                    margin-bottom: 5px;
+                    transform: translateY(10px);
+                    transition: all 0.4s ease-in-out;
+                }
+                span.text {
+                    transition: all 0.4s ease-in-out;
+                    opacity: 0;
+                    color: $Color-one;
+                    font-size: 0.8em;
+                    transform: translateY(-10px);
+                    color: $Color-one;
+                    // position: absolute;
+                }
+                &:hover {
+                    background-color: $Color-Master;
+                    color: $Color-White;
+                    img {
+                        transform: translateY(0);
+                    }
+                    span.text {
+                        opacity: 1;
+                        transform: translateY(0);
+                        color: $Color-White;
+                        // position: relative;
+                    }
+                }
+            }
+            &:not(:last-child) {
+                a {
+                    border-bottom: 1px solid $Color-Master;
+                }
+            }
+        }
+    }
+}

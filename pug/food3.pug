@@ -1,0 +1,40 @@
+h3.text-center What is your budget for the diet?
+.form-check
+    input#Economic.form-check-input(type='radio', name='budgetDiet')
+    label.form-check-label(for='Economic')
+        .label-body 
+            h4 Economic
+            p Popular ingredients and easy to buy healthy recipes
+        
+.form-check
+    input#Expensive.form-check-input(type='radio', name='budgetDiet')
+    label.form-check-label(for='Expensive')
+        .label-body 
+            h4 Expensive
+            p Unusual and more expensive ingredients for special recipes
+        
+
+        
+.event.text-center(style="position: relative;bottom: unset;")
+    a.btn.text-center.mx-3.btn-white( data-value="food2.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="food4.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

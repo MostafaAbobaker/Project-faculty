@@ -1,0 +1,274 @@
+- var pageTitl = "overview";
+html(lang="en")
+    head
+        include includes/head.pug
+    body 
+        include includes/asideBar.pug
+        section.overview 
+            .container-fluid 
+                .row 
+                    .col-lg-9
+                        .content-chart 
+                            // Start Header Title
+                            .header 
+                                h3.heading Dashboard 
+                                .your-gool 
+                                    h5.title 	ONLY 3 MONTHS AND 15 DAYS		
+                                    small 	 UNTIL YOU REACH YOUR GOAL!					
+                            // End Header Title
+                            // Start Box Details
+                            .box-details 
+                                button.box-info.bg-one(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal") 
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/calorie.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Calorie
+                                        .heading 1752
+                                        .box-gool 
+                                            .name-gool Goal
+                                            .target-gool 52500 
+                                                sub  Col
+                                button.box-info.bg-two(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/Steps.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Steps
+                                        .heading 8000
+                                            sub st
+                                        .box-gool 
+                                            .name-gool Goal
+                                            .target-gool 10000 
+                                                sub  Col
+                                button.box-info.bg-three(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/Weight.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Weight
+                                        .heading 83
+                                            sub Kg
+                                        .box-gool 
+                                            .name-gool Goal
+                                            .target-gool 72 
+                                                sub  Kg
+                                button.box-info.bg-four(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/Drink Water.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Drink Water
+                                        .heading 1200
+                                            sub ml
+                                        .box-gool 
+                                            .name-gool Goal
+                                            .target-gool 2000 
+                                                sub  Col
+                                button.box-info.bg-four(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/Sleep.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Sleep
+                                        .heading 
+                                            span.houre 6h 
+                                            span.min 34m
+                                        .box-gool 
+                                            .name-gool Goal
+                                            .target-gool  
+                                                span.houre 8h 
+                                                span.min 20m
+                                button.box-info.bg-three(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/BloodPressure.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Blood Pressure
+                                        .heading 119/81 
+                                            small  
+                                                sub mmHg
+                                        .box-gool
+                                            .name-gool Normal
+                                            
+                                button.box-info.bg-one(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/Pulse.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Pulse
+                                        .heading 65 
+                                            sub bpm
+                                        .box-gool 
+                                            .name-gool Normal
+
+                                button.box-info.bg-two(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal")
+                                    .icon 
+                                        img.w-100(src="images/overviewICon/Meals.svg", alt="")
+                                    .box-info-body 
+                                        .name-box Meals
+                                        .heading 
+                                            span.number 4
+                                            span /
+                                            span.total 6
+                                        .box-gool 
+                                            .name-gool Goal
+                                            .target-gool 1604 
+                                                sub  Col
+                            // End Box Details    
+                            // Start Box chars    
+                            .box-char-pir 
+                                .box-pir 
+                                    .box-header 
+                                        h4 Cardio
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #chartCardio
+                                .box-pir 
+                                    .box-header 
+                                        h4 Strength Training
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #StrengthTraining
+                                .box-pir 
+                                    .box-header 
+                                        h4 Other Activities
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #OtherActivities
+                            // End Box chars  
+                            // Start Box chars    
+                            .box-char-pir 
+                                .box-pir.Half
+                                    .box-header 
+                                        h4 DIETARY ANALYSIS
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #DIETARYANALYSIS
+                                .box-pir.Half 
+                                    .box-header 
+                                        h4 EXERCISE ANALYSIS
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #EXERCISEANALYSIS
+                                
+                            // End Box chars  
+                            
+                            // Start Box chars    
+                            .box-char-pir 
+                                .box-pir 
+                                    .box-header 
+                                        h4 Measurements (cm)
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #Measurements
+                                .box-pir 
+                                    .box-header 
+                                        h4 Weight - BMI
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #WeightBMI
+                                .box-pir 
+                                    .box-header 
+                                        h4 Weight - Body Fat
+                                        a.icon(href="") 
+                                            i.fas.fa-info-circle.fa-fw 
+                                    .box-body 
+                                        #WeightBodyFat
+                            // End Box chars  
+                    .col-lg-3       
+                        .box-profiles   
+                            .card-box
+                                .image 
+                                    img.w-100(src="images/man (1).png", alt="")
+                                .box-profiles-body 
+                                    h4.heading Hi, Mostafa Abobakr
+                                    span.small Giza, Egypt.
+                            .box-profiles-footer 
+                                .box-footer 
+                                    span Age 
+                                    span 34 
+                                        sub Y.O    
+                                .box-footer 
+                                    span Height 
+                                    span 172 
+                                        sub cm
+                                a.box-footer(href="index.html") 
+                                    img(src="images/overviewICon/Exit.svg", alt="")
+                        .box-action 
+                            h4.heading To-Do Dial Plan
+                            .body-box-action 
+                                ul.list-unstyled 
+                                    li.list-item 
+                                        label.time-do(for="Wakeup") 
+                                            span.time 09:00
+                                            span.name Wake up
+                                        .action-checked
+                                            input#Wakeup.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Yoga") 
+                                            span.time 09:30
+                                            span.name Yoga & Exercise
+                                        .action-checked
+                                            input#Yoga.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Breakfast") 
+                                            span.time 10:00
+                                            span.name Breakfast
+                                        .action-checked
+                                            input#Breakfast.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Swimming") 
+                                            span.time 11:30
+                                            span.name Swimming
+                                        .action-checked
+                                            input#Swimming.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Lunch") 
+                                            span.time 13:00
+                                            span.name Lunch
+                                        .action-checked
+                                            input#Lunch.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Meeting") 
+                                            span.time 15:30
+                                            span.name Meeting
+                                        .action-checked
+                                            input#Meeting.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Workout") 
+                                            span.time 18:00
+                                            span.name Workout
+                                        .action-checked
+                                            input#Workout.form-check-input(type='checkbox', value='', aria-label='...')
+                                    li.list-item 
+                                        label.time-do(for="Dinner") 
+                                            span.time 20:00
+                                            span.name Dinner
+                                        .action-checked
+                                            input#Dinner.form-check-input(type='checkbox', value='', aria-label='...')
+
+
+
+        // Modal
+        #exampleModal.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog
+                .modal-content.bg-dark
+                    .modal-header
+                        h5#exampleModalLabel.modal-title Calorie
+                        button.btn-close(type='button', data-bs-dismiss='modal', aria-label='Close')
+                            i.fas.fa-times.fa-fw
+                    .modal-body
+                        .form-floating.mb-3
+                            input#floatingInput.form-control(type='text', placeholder='Calorie')
+                            label(for='floatingInput') Calorie 
+
+                    .modal-footer
+                        button.btn.btn-white(type='button', data-bs-dismiss='modal') Close
+                        button.btn.btn-green(type='button') Save changes
+
+
+
+        include includes/script.pug
+        script(src="js/apexcharts.min.js") 
+        script(src="js/JsChart.js") 

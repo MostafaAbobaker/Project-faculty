@@ -1,0 +1,539 @@
+// Start Main Section
+main.main-section {
+    background: url(../images/bg_2.jpg) no-repeat 10% center;
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        color: #fff;
+        font-weight: bold;
+        font-size: 72px;
+        border: 3px solid #7BA62C;
+        width: 350px;
+        text-align: center;
+        transform: skewY(-5deg);
+        margin-bottom: 28px;
+        position: relative;
+        text-transform: uppercase;
+        &:not(:last-child) {
+            &::after {
+                content: "";
+                width: 350px;
+                height: 3px;
+                background-color: #7BA62C;
+                position: absolute;
+                bottom: -18px;
+                inset-inline-start: -3px;
+                transform: skewY(5deg);
+                z-index: -1;
+            }
+        }
+        &:last-child {
+            background-color: $Color-Master;
+            color: $Color-White;
+        }
+        @media (max-width: 575.98px) {
+            font-size: 42px;
+            width: 300px;
+            &:not(:last-child) {
+                &::after {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+// End Main Section
+// Start Content Website
+.Content-Website {
+    background-color: $Color-two;
+    padding: 60px 0;
+    // background: url(../../images/background_03_01.png) no-repeat center center, $Color-two;
+    // background-size: cover;
+    h1 {
+        color: $Color-White;
+        margin-bottom: 40px;
+    }
+    .d-flex {
+        flex-wrap: wrap;
+    }
+    .w-20 {
+        width: 20%;
+        flex: 0 0 20%;
+        text-align: center;
+        img {
+            display: inline-block;
+            margin-bottom: 20px;
+            width: 150px;
+        }
+        h3 {
+            color: $Color-White;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        &:not(:last-child) {
+            border-inline-end: 1px solid rgba(#454748, 0.7);
+        }
+        @media (max-width: 575.98px) {
+            width: 100%;
+            flex: 0 0 100%;
+            &:not(:last-child) {
+                border-inline-end: none;
+                // border-block-end: 1px solid rgba(#454748, 0.7);
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+// End Content Website
+// Start .Choose-Us
+.Choose-Us {
+    padding: 60px 0;
+    background: url(../images/background_03_01.png) no-repeat center center;
+    background-size: cover;
+    h2 {
+        font-size: 32px;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 25px;
+        &::before {
+            content: 'Why Us';
+            position: absolute;
+            top: -20px;
+            inset-inline-start: 7%;
+            font-size: 30px;
+            font-weight: bold;
+            color: $Color-Master;
+            font-family: "great sejagad";
+        }
+    }
+    .item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        &:not(:last-child) {
+            border-bottom: 1px solid rgba(#000, .1);
+        }
+        .image {
+            width: 70px;
+            height: 70px;
+            flex: 0 0 70px;
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid rgba(#aaa, .2);
+            box-shadow: 0 0 5px rgba(#000, .1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 35px;
+            font-weight: bold;
+            margin-inline-end: 20px;
+        }
+        .item-body {
+            h3 {
+                font-size: 22px;
+            }
+            p {
+                margin-inline-start: 10px;
+            }
+        }
+    }
+}
+
+// End .Choose-Us
+// Start Best body
+.best-body {
+    padding: 60px 0;
+    background: url(../images/background_03_01.png) no-repeat center center;
+    background-size: cover;
+    h2 {
+        font-size: 32px;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 25px;
+        &::before {
+            content: 'Build your';
+            position: absolute;
+            top: -20px;
+            inset-inline-start: 7%;
+            font-size: 30px;
+            font-weight: bold;
+            color: $Color-Master;
+            font-family: "great sejagad";
+        }
+    }
+    .col-lg-4 {
+        &:nth-child(2) {
+            transform: translateY(-40px);
+        }
+        &:nth-child(3) {
+            transform: translateY(-80px);
+        }
+        @media (max-width: 575.98px) {
+            &:nth-child(2) {
+                transform: translateY(0);
+            }
+            &:nth-child(3) {
+                transform: translateY(0);
+            }
+        }
+    }
+    .item {
+        position: relative;
+        transition: all 0.4s ease-in-out;
+        width: 98%;
+        margin: 0 auto 40px;
+        .image {
+            width: 100%;
+            position: relative;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000, .5);
+                z-index: 2;
+                top: 0;
+                inset-inline-start: 0;
+            }
+        }
+        h4 {
+            position: absolute;
+            opacity: 0;
+            transition: all 0.4s ease-in-out;
+            top: 100%;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            color: $Color-White;
+            font-weight: bold;
+            width: 100%;
+        }
+        &:hover {
+            h4 {
+                opacity: 1;
+                top: 80%;
+            }
+        }
+    }
+}
+
+// End Best body
+// Start Our Blog
+.our-blog {
+    background-color: $Color-two;
+    padding: 60px 0;
+    position: relative;
+    &::after {
+        content: '';
+        background: url(../images/background_03_01.png) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mix-blend-mode: color-burn;
+    }
+    h2 {
+        font-size: 32px;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 40px;
+        position: relative;
+        color: $Color-White;
+        z-index: 2;
+        &::before {
+            content: 'WHAT’S NEW?';
+            position: absolute;
+            top: -20px;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            font-weight: bold;
+            color: $Color-Master;
+            font-family: "great sejagad";
+        }
+    }
+    .item {
+        position: relative;
+        z-index: 3;
+        color: $Color-White;
+        .image {
+            margin-bottom: 15px;
+            img {
+                width: 100% !important;
+                height: 250px;
+                object-fit: cover;
+            }
+        }
+        .item-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100px;
+            h4 {
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+            .groub-info {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .info-box {
+                    i {
+                        color: $Color-Master;
+                        display: inline-block;
+                        margin-inline-end: 5px;
+                    }
+                    span.number {
+                        color: $Color-Master;
+                        font-size: 18px;
+                        font-weight: bold;
+                        display: inline-block;
+                        margin-inline-end: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Our Blog
+// Start Big-Store
+.Big-Store {
+    padding: 60px 0;
+    background: url(../images/background_03_01.png) no-repeat center center;
+    background-size: cover;
+    h2 {
+        font-size: 32px;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+        &::before {
+            content: 'Store';
+            position: absolute;
+            top: -20px;
+            inset-inline-start: 6%;
+            font-size: 30px;
+            font-weight: bold;
+            color: $Color-Master;
+            font-family: "great sejagad";
+        }
+    }
+    .button-groub {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        .btn {
+            border: 1px solid $Color-Master;
+            min-width: 100px;
+            background-color: $Color-White;
+            transition: all 0.4s ease-in-out;
+            &.active {
+                background-color: $Color-Master;
+                color: $Color-White;
+            }
+            &:not(.active):hover {
+                background-color: rgba($Color-Master, 0.2);
+            }
+        }
+    }
+    .item {
+        background-color: $Color-White;
+        border: 1px solid rgba($Color-two, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba($Color-two, 0.1);
+        .image {
+            border-bottom: 1px solid rgba($Color-two, 0.1);
+            background-color: $Color-White;
+            border-start-start-radius: 5px;
+            border-start-end-radius: 5px;
+            img {
+                object-fit: scale-down;
+                height: 240px;
+                border-start-start-radius: 10px;
+                border-start-end-radius: 10px;
+            }
+        }
+        .item-body {
+            padding: 10px;
+            h4 {
+                font-size: 14px;
+                display: -webkit-box;
+                height: 51.2px;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 1.625;
+            }
+            .price {
+                display: flex;
+                justify-content: space-between;
+                padding-inline: 5px;
+                margin-bottom: 5px;
+                h3 {
+                    font-size: 18px;
+                }
+            }
+            .add {
+                display: flex;
+                justify-content: center;
+                .btn {
+                    background-color: rgba($Color-Master, .2);
+                    border: 1px solid $Color-Master;
+                    border-radius: 25px;
+                    transition: all 0.4s ease-in-out;
+                    &:hover {
+                        background-color: $Color-Master;
+                        color: $Color-White;
+                        box-shadow: 0 0 5px rgba(#000, .1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// End Big-Store
+// Start Team Work
+.team-work {
+    background-color: $Color-two;
+    padding: 60px 0;
+    position: relative;
+    &::after {
+        content: '';
+        background: url(../images/background_03_01.png) no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mix-blend-mode: color-burn;
+    }
+    h2 {
+        font-size: 32px;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 40px;
+        position: relative;
+        color: $Color-White;
+        z-index: 2;
+        &::before {
+            content: 'Our Staff';
+            position: absolute;
+            top: -20px;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            font-weight: bold;
+            color: $Color-Master;
+            font-family: "great sejagad";
+        }
+    }
+    .box {
+        background-color: $Color-White;
+        width: 100%;
+        // height: 280px;
+        transform: skewX(-10deg);
+        position: relative;
+        margin-bottom: 15px;
+        img {
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+    .text {
+        position: absolute;
+        width: 100%;
+    }
+    h4 {
+        color: #fff;
+        font-style: italic;
+        padding-inline-start: 40px;
+        font-weight: bold;
+        // text-align:center;
+    }
+    p {
+        color: #fff;
+        font-style: italic;
+        padding: 0 30px;
+    }
+    .col-lg-3 {
+        position: relative;
+        z-index: 3;
+        margin-bottom: 140px;
+        &:nth-child(2) {
+            .box {
+                img {
+                    object-position: top;
+                }
+            }
+        }
+        &:nth-child(3) {
+            .box {
+                img {
+                    object-position: 0 -7px;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .box {
+                img {
+                    object-position: top;
+                }
+            }
+        }
+        &:nth-of-type(even) {
+            .box {
+                transform: skewX(-10deg) translateY(100px);
+            }
+        }
+        &:nth-of-type(ODD) {
+            &::after {
+                content: "";
+                background-color: $Color-Master;
+                width: 15px;
+                height: 200px;
+                transform: skewX(-10deg);
+                z-index: 2;
+                position: absolute;
+                inset-inline-end: 0;
+                bottom: -27%;
+                right: 35px;
+            }
+            .text {
+                top: 105%;
+                position: absolute;
+                inset-inline-start: -47px;
+            }
+        }
+        &:nth-of-type(even) {
+            &::after {
+                content: "";
+                background-color: $Color-Master;
+                width: 15px;
+                height: 200px;
+                transform: skewX(-10deg);
+                z-index: 2;
+                position: absolute;
+                inset-inline-end: 0;
+                top: 0%;
+                right: 0px;
+            }
+        }
+    }
+}
+
+// end Team Work

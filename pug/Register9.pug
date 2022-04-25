@@ -1,0 +1,65 @@
+
+h3.text-center Choose the closest picture to your body shape from the pictures?
+.d-flex.flex-wrap.multi-photo
+    .form-check.gender.p-0
+        input#body1.form-check-input(type='radio', name='body')
+        label.form-check-label(for='body1')
+            .label-image.w-auto
+                img.w-100(src="images/body1.png", alt="")
+    .form-check.gender.p-0
+        input#body2.form-check-input(type='radio', name='body')
+        label.form-check-label(for='body2')
+            .label-image.w-auto 
+                img.w-100(src="images/body2.jpg", alt="")
+    .form-check.gender.p-0
+        input#body3.form-check-input(type='radio', name='body', )
+        label.form-check-label(for='body3')
+            .label-image.w-auto 
+                img.w-100(src="images/body3.png", alt="")
+    .form-check.gender.p-0
+        input#body4.form-check-input(type='radio', name='body', )
+        label.form-check-label(for='body4')
+            .label-image.w-auto 
+                img.w-100(src="images/body4.png", alt="")
+    .form-check.gender.p-0
+        input#body5.form-check-input(type='radio', name='body')
+        label.form-check-label(for='body5')
+            .label-image.w-auto 
+                img.w-100(src="images/body5.png", alt="")
+    .form-check.gender.p-0
+        input#body6.form-check-input(type='radio', name='body')
+        label.form-check-label(for='body6')
+            .label-image.w-auto 
+                img.w-100(src="images/body6.png", alt="")
+    .form-check.gender.p-0
+        input#body7.form-check-input(type='radio', name='body', )
+        label.form-check-label(for='body7')
+            .label-image.w-auto 
+                img.w-100(src="images/body7.png", alt="")
+    .form-check.gender.p-0
+        input#body8.form-check-input(type='radio', name='body', )
+        label.form-check-label(for='body8')
+            .label-image.w-auto 
+                img.w-100(src="images/body8.png", alt="")
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register7.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register10.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+            console.log(DataValue);
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

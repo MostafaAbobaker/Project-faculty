@@ -1,0 +1,69 @@
+h5.text-center Do you participate in any other sports?
+.d-flex.flex-wrap.justify-content-center
+    .form-check.gender.w-25.mx-4.p-0
+        input#sports_yes.form-check-input(type='radio', name='sports')
+        label.form-check-label(for='sports_yes')
+            .label-body 
+                h4 Yes
+    .form-check.gender.w-25.mx-4.p-0
+        input#sports_No.form-check-input(type='radio', name='sports')
+        label.form-check-label(for='sports_No')
+            .label-body 
+                h4 No
+.mb-2
+    input.form-control(type='text', placeholder='What type of sport?')
+
+    
+h5.text-center Have you had any surgeries this year?
+.d-flex.flex-wrap.justify-content-center
+    .form-check.gender.w-25.mx-4.p-0
+        input#surgeries_yes.form-check-input(type='radio', name='surgeries')
+        label.form-check-label(for='surgeries_yes')
+            .label-body 
+                h4 Yes
+    .form-check.gender.w-25.mx-4.p-0
+        input#surgeries_No.form-check-input(type='radio', name='surgeries')
+        label.form-check-label(for='surgeries_No')
+            .label-body 
+                h4 No
+.mb-2
+    input.form-control(type='text', placeholder=' What is the surgery?')                
+
+h5.text-center Do you suffer from any chronic diseases?
+.d-flex.flex-wrap.justify-content-center
+    .form-check.gender.w-25.mx-4.p-0
+        input#diseases_yes.form-check-input(type='radio', name='diseases')
+        label.form-check-label(for='diseases_yes')
+            .label-body 
+                h4 Yes
+    .form-check.gender.w-25.mx-4.p-0
+        input#diseases_No.form-check-input(type='radio', name='diseases')
+        label.form-check-label(for='diseases_No')
+            .label-body 
+                h4 No
+.mb-2
+    input.form-control(type='text', placeholder='  what kind of sickness?')                    
+
+    
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register12.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register14.html") Next
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

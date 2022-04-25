@@ -1,0 +1,75 @@
+
+<h3 class="text-center">Choose the closest picture to your body shape from the pictures?</h3>
+<div class="d-flex flex-wrap multi-photo">
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body1" type="radio" name="body"/>
+    <label class="form-check-label" for="body1">
+      <div class="label-image w-auto"><img class="w-100" src="images/body1.png" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body2" type="radio" name="body"/>
+    <label class="form-check-label" for="body2">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body2.jpg" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body3" type="radio" name="body"/>
+    <label class="form-check-label" for="body3">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body3.png" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body4" type="radio" name="body"/>
+    <label class="form-check-label" for="body4">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body4.png" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body5" type="radio" name="body"/>
+    <label class="form-check-label" for="body5">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body5.png" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body6" type="radio" name="body"/>
+    <label class="form-check-label" for="body6">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body6.png" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body7" type="radio" name="body"/>
+    <label class="form-check-label" for="body7">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body7.png" alt=""/></div>
+    </label>
+  </div>
+  <div class="form-check gender p-0">
+    <input class="form-check-input" id="body8" type="radio" name="body"/>
+    <label class="form-check-label" for="body8">
+      <div class="label-image w-auto"> <img class="w-100" src="images/body8.png" alt=""/></div>
+    </label>
+  </div>
+</div>
+<div class="event text-center"><a class="btn text-center mx-3 btn-white" data-value="Register7.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="Register10.html">Next</a></div>
+<script src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/Main.js"> </script>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+          var DataValue = $(this).attr('data-value');
+          //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+          $('#Register_module').load(DataValue);
+          console.log(DataValue);
+      });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

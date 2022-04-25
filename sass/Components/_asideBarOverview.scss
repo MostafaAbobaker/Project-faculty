@@ -1,0 +1,47 @@
+// aside.aside-bar  
+aside.aside-bar {
+    background-color: $Color-Master;
+    width: 80px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    inset-inline-start: 0;
+    a.link-head-page {
+        padding: 20px 10px 80px;
+        display: block;
+    }
+    ul.list-unstyled {
+        li {
+            &.active {
+                a {
+                    background-color: $Color-White;
+                    color: $Color-Master;
+                    border-start-start-radius: 10px;
+                    border-end-start-radius: 10px;
+                }
+            }
+            a {
+                color: $Color-White;
+                text-align: center;
+                display: block;
+                padding: 10px;
+                margin-bottom: 2px;
+                font-weight: bold;
+                transition: all 0.4s ease-in-out;
+                .text {
+                    font-size: .8em;
+                    margin-top: 5px;
+                }
+            }
+            &:not(.active) {
+                a {
+                    &:hover {
+                        background-color: rgba($Color-White, 0.2);
+                        border-start-start-radius: 10px;
+                        border-end-start-radius: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

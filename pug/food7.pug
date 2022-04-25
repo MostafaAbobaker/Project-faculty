@@ -1,0 +1,58 @@
+h4.text-center Are you allowed to eat meals while at work?
+.form-check
+    input#havefood.form-check-input(type='radio', name='mealswork')
+    label.form-check-label(for='havefood')
+        .label-body 
+            h4 Yes
+            p Yes, I have time for food
+        
+.form-check.mb-4
+    input#NoMeals.form-check-input(type='radio', name='mealswork')
+    label.form-check-label(for='NoMeals')
+        .label-body 
+            h4 No 
+            p Meals are repeated during the week
+        
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') What are your favorite sources of protein?
+h5.text-center How fast when your digestion and burning fat?
+.d-flex.flex-wrap.justify-content-center.mb-2
+    .form-check.gender.mx-4
+        input#slow.form-check-input(type='radio', name='burningfat')
+        label.form-check-label(for='slow')
+            .label-body 
+                div slow
+    .form-check.gender.mx-4
+        input#Average.form-check-input(type='radio', name='burningfat')
+        label.form-check-label(for='Average')
+            .label-body 
+                div Average
+    .form-check.gender.mx-4
+        input#Quick.form-check-input(type='radio', name='burningfat')
+        label.form-check-label(for='Quick')
+            .label-body 
+                div Quick        
+.event.text-center(style="position: relative;bottom: unset;")
+    a.btn.text-center.mx-3.btn-white( data-value="food6.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="food8.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

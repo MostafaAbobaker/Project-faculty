@@ -1,0 +1,88 @@
+
+<h5 class="text-center">Do you participate in any other sports?</h5>
+<div class="d-flex flex-wrap justify-content-center">
+  <div class="form-check gender w-25 mx-4 p-0">
+    <input class="form-check-input" id="sports_yes" type="radio" name="sports"/>
+    <label class="form-check-label" for="sports_yes">
+      <div class="label-body"> 
+        <h4>Yes</h4>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender w-25 mx-4 p-0">
+    <input class="form-check-input" id="sports_No" type="radio" name="sports"/>
+    <label class="form-check-label" for="sports_No">
+      <div class="label-body"> 
+        <h4>No</h4>
+      </div>
+    </label>
+  </div>
+</div>
+<div class="mb-2">
+  <input class="form-control" type="text" placeholder="What type of sport?"/>
+</div>
+<h5 class="text-center">Have you had any surgeries this year?</h5>
+<div class="d-flex flex-wrap justify-content-center">
+  <div class="form-check gender w-25 mx-4 p-0">
+    <input class="form-check-input" id="surgeries_yes" type="radio" name="surgeries"/>
+    <label class="form-check-label" for="surgeries_yes">
+      <div class="label-body"> 
+        <h4>Yes</h4>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender w-25 mx-4 p-0">
+    <input class="form-check-input" id="surgeries_No" type="radio" name="surgeries"/>
+    <label class="form-check-label" for="surgeries_No">
+      <div class="label-body"> 
+        <h4>No</h4>
+      </div>
+    </label>
+  </div>
+</div>
+<div class="mb-2">
+  <input class="form-control" type="text" placeholder=" What is the surgery?"/>
+</div>
+<h5 class="text-center">Do you suffer from any chronic diseases?</h5>
+<div class="d-flex flex-wrap justify-content-center">
+  <div class="form-check gender w-25 mx-4 p-0">
+    <input class="form-check-input" id="diseases_yes" type="radio" name="diseases"/>
+    <label class="form-check-label" for="diseases_yes">
+      <div class="label-body"> 
+        <h4>Yes</h4>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender w-25 mx-4 p-0">
+    <input class="form-check-input" id="diseases_No" type="radio" name="diseases"/>
+    <label class="form-check-label" for="diseases_No">
+      <div class="label-body"> 
+        <h4>No</h4>
+      </div>
+    </label>
+  </div>
+</div>
+<div class="mb-2">
+  <input class="form-control" type="text" placeholder="  what kind of sickness?"/>
+</div>
+<div class="event text-center"><a class="btn text-center mx-3 btn-white" data-value="Register12.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="Register14.html">Next</a></div>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+      var DataValue = $(this).attr('data-value');
+      //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+      $('#Register_module').load(DataValue);
+      console.log(DataValue);
+  
+  });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

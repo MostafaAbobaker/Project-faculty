@@ -1,0 +1,254 @@
+// Start Register Page
+.Register {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &.training {
+        background: url(../images/bg-register.png) no-repeat center center;
+        background-size: cover;
+        height: calc(100vh - 109px);
+        position: relative;
+        &::after {
+            content: '';
+            background-color: rgba(#000, .6);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    &.foods {
+        background: url(../images/2983448.png) no-repeat center center;
+        background-size: cover;
+        height: calc(100vh - 109px);
+        position: relative;
+        &::after {
+            content: '';
+            background-color: rgba(#000, .6);
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+    .box-setup {
+        background-color: rgba(#EAEAEA, 0.8);
+        border-radius: 20px;
+        position: relative;
+        z-index: 3;
+        padding: 30px;
+        width: 570px;
+        height: 500px;
+        h3 {
+            margin-bottom: 15px;
+        }
+        .multi-photo {
+            display: flex;
+            justify-content: space-between;
+            .gender {
+                flex: 0 0 24%;
+            }
+        }
+        .form-check {
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            position: relative;
+            padding: 10px;
+            border-radius: 10px;
+            border: 3px solid #ccc;
+            box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+            margin-bottom: 10px;
+            transition: all 0.4s ease-in-out;
+            .form-check-input {
+                position: absolute;
+                inset-inline-start: 35px;
+            }
+            .form-check-label {
+                display: flex;
+                margin-inline-start: 30px;
+                width: 100%;
+                justify-content: space-between;
+                p {
+                    margin: 0;
+                    max-width: 400px;
+                }
+                .label-image {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-inline-start: 10px;
+                    svg,
+                    path {
+                        width: 50px;
+                        height: 50px;
+                        fill: #CCCCCC;
+                        transition: all 0.2s ease-in-out;
+                    }
+                    i {
+                        color: #CCCCCC;
+                    }
+                }
+            }
+            .form-check-input {
+                &:checked {
+                    background-color: $Color-Master;
+                    border-color: $Color-Master;
+                }
+                &:focus {
+                    border-color: $Color-Master;
+                    box-shadow: 0 0 0.25rem rgba($Color-Master, .25);
+                }
+            }
+            &:hover {
+                border-color: rgba($Color-Master, .5);
+                box-shadow: 0 0 15px rgba($Color-Master, .2);
+                svg,
+                path {
+                    fill: rgba($Color-Master, 0.5)!important;
+                }
+            }
+            &.checked {
+                border: 3px solid rgba($Color-Master, .9);
+                box-shadow: 0 0 15px rgba($Color-Master, .2);
+                background-color: #f1fbdf;
+                svg,
+                path {
+                    fill: $Color-Master!important;
+                }
+                i {
+                    color: $Color-Master!important;
+                }
+            }
+        }
+        .gender {
+            .form-check-input {
+                position: absolute;
+                opacity: 0;
+            }
+            .form-check-label {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0!important;
+                .label-image {
+                    width: 120px;
+                    padding: 10px;
+                    margin: 0!important;
+                    i {
+                        color: #333;
+                    }
+                }
+                .label-body {
+                    font-weight: bold;
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+            &.checked {
+                i {
+                    color: $Color-Master;
+                }
+            }
+        }
+        .form-floating {
+            label {
+                font-weight: bold;
+                top: 8px;
+            }
+            .icon {
+                position: absolute;
+                inset-inline-end: 15px;
+                top: 20px;
+                transition: all 0.4s ease-in-out;
+                color: #999;
+                width: 40px;
+                height: 40px;
+                img {
+                    height: 100%;
+                }
+                svg {
+                    width: 40px;
+                    height: 40px;
+                    fill: #999;
+                    transition: all 0.4s ease-in-out;
+                    path {
+                        fill: #999;
+                    }
+                }
+            }
+            .form-control {
+                border-radius: 10px;
+                border: 3px solid rgba(#CCC, .5);
+                box-shadow: 0 0 7px rgba(#000, .2);
+                height: calc(4.5rem + 2px);
+                &:focus {
+                    &~label {
+                        transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+                        color: $Color-Master;
+                    }
+                    &~.icon {
+                        color: $Color-Master;
+                    }
+                }
+                &:not(:placeholder-shown) {
+                    &~label {
+                        transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+                        color: $Color-Master;
+                    }
+                    &~.icon {
+                        color: $Color-Master;
+                        opacity: 1;
+                        svg {
+                            fill: $Color-Master;
+                            path {
+                                fill: $Color-Master;
+                            }
+                        }
+                    }
+                }
+            }
+            &.data-birthday {
+                .form-control {
+                    &::after {
+                        font-family: "Font Awesome 5 Free";
+                        font-weight: 900;
+                        content: "\f1fd";
+                        position: absolute;
+                        top: 20px;
+                        right: 15px;
+                        z-index: 0;
+                        font-size: 32px;
+                        color: #999;
+                    }
+                    &::-webkit-calendar-picker-indicator {
+                        opacity: 0; //removes awful triangle indicator
+                        position: relative;
+                        z-index: 2;
+                        width: 50%;
+                        background-color: transparent;
+                    }
+                    &:focus {
+                        &::after {
+                            color: $Color-Master;
+                        }
+                    }
+                }
+            }
+        }
+        .event {
+            position: absolute;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            width: 330px;
+            bottom: 20px;
+        }
+    }
+}
+
+// End Register Page

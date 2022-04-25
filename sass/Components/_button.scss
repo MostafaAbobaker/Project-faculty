@@ -1,0 +1,25 @@
+.btn-white {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 3px 0 0 #999;
+    &:hover {
+        box-shadow: none;
+        background-color: #eee;
+    }
+}
+
+.btn-green {
+    padding-right: 3rem !important;
+    padding-left: 3rem !important;
+    background-color: $Color-Master;
+    color: $Color-White;
+    box-shadow: 0 3px 0 0 $Color-Dark;
+    padding: 5px 15px;
+    &:hover {
+        box-shadow: none;
+        background-color: $Color-Dark;
+        color: $Color-White;
+    }
+}

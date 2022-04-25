@@ -1,0 +1,32 @@
+
+<div class="form-floating mb-4">
+  <input class="form-control" id="floatingInput" type="text" placeholder="Full Name"/>
+  <label for="floatingInput">Waist size in cm?</label>
+  <div class="icon"> <img src="images/Arm/Waist.webp" alt=""/></div>
+</div>
+<div class="form-floating mb-4">
+  <input class="form-control" type="text" placeholder="Full Name"/>
+  <label for="floatingInput">Thigh size in cm?</label>
+  <div class="icon"> <img src="images/Arm/leag.webp" alt=""/></div>
+</div>
+<div class="form-floating mb-4">
+  <input class="form-control" type="text" placeholder="Full Name"/>
+  <label for="floatingInput">Body fat in kg?</label>
+  <div class="icon"> <i class="fas fa-weight fa-fw fa-2x"></i></div>
+</div>
+<div class="event text-center"><a class="btn text-center mx-3 btn-white" data-value="Register7.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="Register9.html">Next</a></div>
+<script src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/Main.js"> </script>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+      var DataValue = $(this).attr('data-value');
+      //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+      $('#Register_module').load(DataValue);
+      console.log(DataValue);
+  
+  });
+      
+  });
+</script>

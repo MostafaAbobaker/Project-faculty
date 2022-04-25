@@ -1,0 +1,45 @@
+
+.form-floating.mb-4.data-birthday
+    input#floatingInput.form-control(type='date', placeholder='Full Name')
+    label(for='floatingInput') How old are you ?
+    .icon 
+        //- i.fas.fa-birthday-cake.fa-fw.fa-2x
+
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Your height in cm?
+    .icon 
+        i.fas.fa-text-height.fa-fw.fa-2x
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Your weight in kg?
+    .icon 
+        i.fas.fa-weight.fa-fw.fa-2x
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Target weight in kg?
+    .icon 
+        include svg/targetweight.svg
+        //-i.fas.fa-weight.fa-fw.fa-2x
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register5.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register7.html") Next
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

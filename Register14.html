@@ -1,0 +1,119 @@
+
+<h5 class="text-center">What is your level of training?</h5>
+<div class="d-flex flex-wrap justify-content-center mb-5">
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="training_junior" type="radio" name="training"/>
+    <label class="form-check-label" for="training_junior">
+      <div class="label-body"> 
+        <div>Junior</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="training_Average" type="radio" name="training"/>
+    <label class="form-check-label" for="training_Average">
+      <div class="label-body"> 
+        <div>Average</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="training_professional" type="radio" name="training"/>
+    <label class="form-check-label" for="training_professional">
+      <div class="label-body"> 
+        <div>Professional</div>
+      </div>
+    </label>
+  </div>
+</div>
+<h5 class="text-center">Average exercise time is right for you?</h5>
+<div class="d-flex justify-content-center mb-5">
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="more_hour" type="radio" name="exercise"/>
+    <label class="form-check-label" for="more_hour">
+      <div class="label-body"> 
+        <div>More Hour</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="less_hour" type="radio" name="exercise"/>
+    <label class="form-check-label" for="less_hour">
+      <div class="label-body"> 
+        <div>Less Hour</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="half_hour" type="radio" name="exercise"/>
+    <label class="form-check-label" for="half_hour">
+      <div class="label-body"> 
+        <div> Half Hour</div>
+      </div>
+    </label>
+  </div>
+</div>
+<h5 class="text-center">How many days a week do you exercise?</h5>
+<div class="d-flex flex-wrap justify-content-center">
+  <div class="form-check gender mx-4 rounded-circle" style="width:50px; height:50px;">
+    <input class="form-check-input" id="two_exercise" type="radio" name="days_exercise"/>
+    <label class="form-check-label" for="two_exercise">
+      <div class="label-body"> 
+        <div class="h4 m-0">2</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4 rounded-circle" style="width:50px; height:50px;">
+    <input class="form-check-input" id="three_exercise" type="radio" name="days_exercise"/>
+    <label class="form-check-label" for="three_exercise">
+      <div class="label-body"> 
+        <div class="h4 m-0">3</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4 rounded-circle" style="width:50px; height:50px;">
+    <input class="form-check-input" id="four_exercise" type="radio" name="days_exercise"/>
+    <label class="form-check-label" for="four_exercise">
+      <div class="label-body"> 
+        <div class="h4 m-0">4</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4 rounded-circle" style="width:50px; height:50px;">
+    <input class="form-check-input" id="five_exercise" type="radio" name="days_exercise"/>
+    <label class="form-check-label" for="five_exercise">
+      <div class="label-body"> 
+        <div class="h4 m-0">5</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4 rounded-circle" style="width:50px; height:50px;">
+    <input class="form-check-input" id="six_exercise" type="radio" name="days_exercise"/>
+    <label class="form-check-label" for="six_exercise">
+      <div class="label-body"> 
+        <div class="h4 m-0">6</div>
+      </div>
+    </label>
+  </div>
+</div>
+<div class="event text-center"><a class="btn text-center mx-3 btn-white" data-value="Register13.html">Back</a><a class="btn text-center mx-3 btn-green next" href="foods.html">Next</a></div>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+      var DataValue = $(this).attr('data-value');
+      //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+      $('#Register_module').load(DataValue);
+      console.log(DataValue);
+  
+  });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

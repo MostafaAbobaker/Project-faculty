@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+$Color-one: #262626;
+$Color-two: #202122;
+$bg-overview: #141319;
+$Color-Master: #7BA62C;
+$Color-Dark: #5A7E2C;
+$Color-White: #fff;
+@import "./Components/header";
+@import "./Components/navbar";
+@import "./Components/Content";
+@import "./Components/asideBarFixed";
+@import "./Components/login";
+@import "./Components/Register";
+@import "./Components/footer";
+@import "./Components/button";
+@import "./Components/asideBarOverview";
+@import "./Components/overview";
+@import "./Components/Training";
+@font-face {
+    font-family: "great sejagad";
+    font-display: block;
+    font-weight: 600;
+    src: url("../great_sejagad/Great\ Sejagad.otf") format("woff2"), url("../great_sejagad/Great\ Sejagad.ttf");
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    // font-family: 'Tajawal', sans-serif;
+    background-color: $bg-overview;
+}
+
+textarea.form-control {
+    background-color: #43455b;
+    border: none;
+    margin: 5px 0;
+    &:focus {
+        background-color: #43455b;
+        border-color: $Color-Master;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba($Color-Master, .25);
+    }
+}
+
+
+/* Start Model */
+
+.modal {
+    .modal-content {
+        background-color: #202122;
+        color: $Color-White;
+        .btn-close {
+            background: none;
+            color: $Color-White;
+        }
+        .form-floating {
+            color: #333;
+        }
+    }
+}
+
+
+/* End Model */
+
+.w-60 {
+    width: 60%!important;
+}
+
+.w-70 {
+    width: 70%!important;
+}
+
+.w-80 {
+    width: 80%!important;
+}
+
+.w-90 {
+    width: 80%!important;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    background: #bbb;
+    border-radius: 5px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: $Color-Master;
+    border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: $Color-Dark;
+}

@@ -1,0 +1,43 @@
+
+<h3 class="text-center">Where do you exercise?</h3>
+<div class="form-check">
+  <input class="form-check-input" id="exercises_nutrition" type="radio" name="flexRadioDefault"/>
+  <label class="form-check-label" for="exercises_nutrition">
+    <div class="label-body"> 
+      <h4>I work out at Home</h4>
+      <p>Body weight with or without tools</p>
+    </div>
+    <div class="label-image"> <i class="fas fa-home fa-fw fa-3x"></i></div>
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" id="exercises" type="radio" name="flexRadioDefault"/>
+  <label class="form-check-label" for="exercises">
+    <div class="label-body"> 
+      <h4>I work out in the Gym</h4>
+      <p>Use free weights and different equipment</p>
+    </div>
+    <div class="label-image"> <i class="fas fa-dumbbell fa-fw fa-3x"></i></div>
+  </label>
+</div>
+<div class="event text-center"><a class="btn text-center mx-3 btn-white" data-value="Register4.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="Register6.html">Next</a></div>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+      var DataValue = $(this).attr('data-value');
+      //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+      $('#Register_module').load(DataValue);
+      console.log(DataValue);
+  
+  });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

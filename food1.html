@@ -1,0 +1,53 @@
+
+<h3 class="text-center">What is your type of diet?</h3>
+<div class="form-check">
+  <input class="form-check-input" id="exercises_nutrition" type="radio" name="diet"/>
+  <label class="form-check-label" for="exercises_nutrition">
+    <div class="label-body"> 
+      <h4>Normal</h4>
+      <p>I don't have any specific eating options</p>
+    </div>
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" id="exercises" type="radio" name="diet"/>
+  <label class="form-check-label" for="exercises">
+    <div class="label-body"> 
+      <h4>vegetarian</h4>
+      <p>I don't eat meat and fish</p>
+    </div>
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" id="nutrition" type="radio" name="diet"/>
+  <label class="form-check-label" for="nutrition">
+    <div class="label-body"> 
+      <h4>Vision</h4>
+      <p>I don't eat any meat or animal by-products</p>
+    </div>
+  </label>
+</div>
+<div class="event text-center" style="position: relative;bottom: unset;"><a class="btn text-center mx-3 btn-green next" data-value="food2.html">Next</a></div>
+<script src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/Main.js"> </script>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+          var DataValue = $(this).attr('data-value');
+          //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+          $('#Register_module').load(DataValue);
+      //- console.log(DataValue);
+  
+      });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

@@ -1,0 +1,47 @@
+.d-flex.justify-content-evenly.mb-4
+    .form-check.gender
+        input#gender_man.form-check-input(type='radio', name='gender')
+        label.form-check-label(for='gender_man')
+            .label-image 
+                i.fas.fa-male.fa-fw.fa-4x
+            .label-body 
+                p Male
+    .form-check.gender
+        input#gender_woman.form-check-input(type='radio', name='gender')
+        label.form-check-label(for='gender_woman')
+            .label-image 
+                i.fas.fa-female.fa-fw.fa-4x
+            .label-body 
+                p Female
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Full Name 
+    .icon 
+        i.fas.fa-user.fa-fw.fa-2x
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Your Phone
+    .icon 
+        i.fas.fa-mobile-alt.fa-fw.fa-2x
+.event.text-center
+    a.btn.text-center.mx-3.btn-white(href="#", data-value="Register1.html") Back
+    a.btn.text-center.mx-3.btn-green.next(href="#", data-value="Register3.html") Next
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

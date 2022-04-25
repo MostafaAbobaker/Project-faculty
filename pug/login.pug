@@ -1,0 +1,48 @@
+html(lang="en")
+    head
+        include includes/head.pug
+    body 
+        include includes/header.pug
+        section.login 
+            .container 
+                .row
+                    .col-lg-6
+                        .Register-box
+                            h4.text-center 
+                                span Register
+                            .alert-box 
+                                .alert-box-body 
+                                    p Before the registration process, please do InBody and know the height, Weight, shoulder width and waist width, and please take a front picture and two side pictures for the left side and the right side and a back side picture
+                                .icon 
+                                    i.fas.fa-exclamation-triangle.fa-fw.fa-2x
+                            .div-action.text-center
+                                a.btn(href="Register.html") 
+                                    i.fas.fa-sign-in.fa-fw
+                                    |  Register Now  
+
+                    .image 
+                        img.w-100(src="images/v1008-02.png", alt="") 
+                    .col-lg-6
+                        .login-form 
+                            h4.text-center 
+                                span Log In 
+                            form(action="")
+                                .form-floating.mb-3.email
+                                    input#floatingInput.form-control(type='email', placeholder='name@example.com')
+                                    label(for='floatingInput') Email 
+                                .form-floating.password.mb-3
+                                    input#floatingPassword.form-control(type='password', placeholder='Password')
+                                    label(for='floatingPassword') Password
+                                .d-flex.justify-content-between
+                                    .form-check
+                                        input#flexCheckDefault.form-check-input(type='checkbox', value='')
+                                        label.form-check-label(for='flexCheckDefault')
+                                            | Remember Me
+                                    a.forgot(href="") Forgot Password?
+                            .div-action.text-center
+                                a.btn.text-center(href="overview.html")
+                                    i.fas.fa-sign-in.fa-fw
+                                    |  Log In 
+
+                
+        include includes/script.pug

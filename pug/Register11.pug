@@ -1,0 +1,39 @@
+
+.form-floating.mb-5
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') What time do you wake up from sleep?
+    .icon 
+       i.far.fa-clock.fa-fw.fa-2x
+
+.form-floating.mb-5
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') What is the time to go to work?
+    .icon 
+        i.far.fa-clock.fa-fw.fa-2x
+.form-floating.mb-5
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') What is your work environment?
+    .icon 
+        i.far.fa-building.fa-fw.fa-2x
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register10.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register12.html") Next
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

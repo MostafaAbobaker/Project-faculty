@@ -1,0 +1,35 @@
+nav.navbar {
+    background-color: $Color-two;
+    .navbar-brand {
+        img {
+            width: 150px;
+        }
+    }
+    .navbar-toggler {
+        color: rgba(#fff, 1);
+        padding: 10px 5px;
+        border-color: #fff;
+    }
+    ul.navbar-nav {
+        li.nav-item {
+            .nav-link {
+                color: $Color-White;
+                padding-right: 1rem;
+                padding-left: 1rem;
+                &.Register {
+                    background-color: $Color-Master;
+                    border-radius: 25px;
+                    color: $Color-White;
+                    padding-right: 1.5rem;
+                    padding-left: 1.5rem;
+                    transition: all 0.4s ease-in-out;
+                    border-top: 1px solid transparent;
+                    &:hover {
+                        background-color: $Color-Dark;
+                        border-top: 3px solid $Color-White;
+                    }
+                }
+            }
+        }
+    }
+}

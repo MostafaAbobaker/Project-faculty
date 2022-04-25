@@ -1,0 +1,41 @@
+h3.text-center Where do you exercise?
+.form-check
+    input#exercises_nutrition.form-check-input(type='radio', name='flexRadioDefault')
+    label.form-check-label(for='exercises_nutrition')
+        .label-body 
+            h4 I work out at Home
+            p Body weight with or without tools
+        .label-image 
+            i.fas.fa-home.fa-fw.fa-3x
+
+.form-check
+    input#exercises.form-check-input(type='radio', name='flexRadioDefault')
+    label.form-check-label(for='exercises')
+        .label-body 
+            h4 I work out in the Gym
+            p Use free weights and different equipment
+        .label-image 
+            i.fas.fa-dumbbell.fa-fw.fa-3x
+
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register4.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register6.html") Next
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

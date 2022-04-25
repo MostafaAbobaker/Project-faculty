@@ -1,0 +1,33 @@
+
+.form-floating.mb-4
+    input#floatingInput.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Waist size in cm?
+    .icon 
+        img(src="images/Arm/Waist.webp", alt="")
+        //-i.fas.fa-weight.fa-fw.fa-2x
+.form-floating.mb-4
+    input.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Thigh size in cm?
+    .icon 
+        img(src="images/Arm/leag.webp", alt="")
+        //-i.fas.fa-weight.fa-fw.fa-2x
+.form-floating.mb-4
+    input.form-control(type='text', placeholder='Full Name')
+    label(for='floatingInput') Body fat in kg?
+    .icon 
+        i.fas.fa-weight.fa-fw.fa-2x
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register7.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register9.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        
+    });

@@ -1,0 +1,249 @@
+- var pageTitl = "Diet";
+html(lang="en")
+    head
+        include includes/head.pug
+    body 
+        include includes/asideBar.pug
+        section.overview 
+            .container-fluid 
+                .row 
+                    .col-lg-4
+                        .box-Training  
+                            h4.header Nutrition
+                            ul.list-unstyled.groub-day
+                                li.link-list.active Sat
+                                li.link-list Sun
+                                li.link-list Mon
+                                li.link-list Tues
+                                li.link-list Wed
+                                li.link-list Thurs
+                                li.link-list Fri
+                                
+                            .box-Training-body
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/1.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                    span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                    .weight 
+                                                        span.weight-number 250 mg
+                                                        span.calaries 581 kci
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/2.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                    span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                    .weight 
+                                                        span.weight-number 250 mg
+                                                        span.calaries 581 kci
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/3.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                    span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                    .weight 
+                                                        span.weight-number 250 mg
+                                                        span.calaries 581 kci
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/4.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                    span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                    .weight 
+                                                        span.weight-number 250 mg
+                                                        span.calaries 581 kci
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/4.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                    span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                    .weight 
+                                                        span.weight-number 250 mg
+                                                        span.calaries 581 kci
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                    
+                                
+                    .col-lg-8    
+                        .slide-show
+                            //- video( controls='')
+                                source(src='../video/mov_bbb.mp4', type='video/mp4')
+                                source(src='../video/mov_bbb.mp4', type='video/ogg')
+                                |   Your browser does not support the video tag.
+                            .vedio-box
+                                iframe( src='https://www.youtube.com/embed/UgA_5V3Jro0', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='')
+                            .choices-exercise
+                                .card-item.w-90  
+                                    .image 
+                                        img.w-100(src="images/Nutty-chicken-satay-a8c094e.jpg", alt="")
+                                    .card-item-body 
+                                        .info 
+                                            h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                            span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                            .weight 
+                                                span.weight-number 250 mg
+                                                span.calaries 581 kci
+                                .button-groub 
+                                    button#btnChangeExercise.btn.btn-outline-warning.rounded-pill.btn-sm
+                                        i.fas.fa-exchange-alt.fa-fw
+                                        | Change Meal
+                                    button#btnFadeBack.btn.btn-outline-primary.rounded-pill.btn-sm
+                                        i.fas.fa-undo.fa-fw
+                                        | Fade back
+                        .d-flex
+                            .w-50.p-2.box-Change-Exercise
+                                .box-Training
+                                    .card-list.pb-0
+                                        ul#myTab.nav.nav-tabs.border-0.p-1.py-2(role='tablist')
+                                            li.nav-item(role='presentation')
+                                                button#home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#home', type='button', role='tab', aria-controls='home', aria-selected='true') Ingredients
+                                            li.nav-item(role='presentation')
+                                                button#profile-tab.nav-link(data-bs-toggle='tab', data-bs-target='#profile', type='button', role='tab', aria-controls='profile', aria-selected='false') Change Meal
+                                        #myTabContent.tab-content.card-body.pb-0 
+                                            #home.tab-pane.fade.show.active.p-2.pb-0(role='tabpanel', aria-labelledby='home-tab' ) 
+                                                .box-Ingredients.d-flex.flex-column.flex-wrap.pb-0(style="max-height:350px")
+                                                    h5 Meat
+                                                    ul.list-unstyled.mb-2 
+                                                        li 1 lb Ground beef
+                                                        li 1 lb Italian sausage
+                                                    h5 Produce
+                                                    ul.list-unstyled.mb-2  
+                                                        li 2 Bay leaves
+                                                        li 2 Carrots
+                                                        li 2 Celery
+                                                        li 6 cloves Garlic
+                                                        li 1 Lemon, Zest of
+                                                        li  1 Onion, red
+                                                        li 2 cups Tomatoes
+                                                        li 15 oz Tomatoes, fire roasted
+                                                    h5 Condiments
+                                                    ul.list-unstyled.mb-2  
+                                                        li 1 squeeze Lemon juice
+                                                        li 2 cans Tomato sauce
+                                                    h5 Baking & Spices
+                                                    ul.list-unstyled.mb-2  
+                                                        li 1 dash Nutmeg
+                                                    h5 Oils & Vinegars
+                                                    ul.list-unstyled 
+                                                        li 1 tbsp Olive oil
+                                                    h5 Dairy
+                                                    ul.list-unstyled.mb-2 
+                                                        li 1 tbsp Butter
+                                                        li 1/4 cup Cream
+                                                        li 1/4 cup Milk
+                                                        li 1 Parmesan cheese
+                                                    h5 Beer, Wine & Liquor
+                                                    ul.list-unstyled.mb-2 
+                                                        li 1 dash Cooking wine
+                                                    h5 Other
+                                                    ul.list-unstyled.mb-2 
+                                                        li Salt and Sepper (to taste)
+                                                 
+
+                                                        
+
+
+                                                
+                                            #profile.tab-pane.fade.pb-0(role='tabpanel', aria-labelledby='profile-tab') 
+                                                .card-item 
+                                                    .image 
+                                                        img.w-100(src="images/Training/1.png", alt="")
+                                                    .card-item-body 
+                                                        .info 
+                                                            h5 The Secret to Authentic Italian Bolognese Sauce
+                                                            span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                            .weight 
+                                                                span.weight-number 250 mg
+                                                                span.calaries 581 kci
+                                                        a.play-icon(href="") 
+                                                            i.far.fa-play-circle.fa-fw.fa-2x
+                                                .card-item 
+                                                    .image 
+                                                        img.w-100(src="images/Training/2.png", alt="")
+                                                    .card-item-body 
+                                                        .info 
+                                                            h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                            span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                            .weight 
+                                                                span.weight-number 250 mg
+                                                                span.calaries 581 kci
+                                                        a.play-icon(href="") 
+                                                            i.far.fa-play-circle.fa-fw.fa-2x
+
+
+
+
+
+
+
+
+                                        
+                                            
+                            .w-50.p-2.box-Fade-Back
+                                .box-Training
+                                    .card-list 
+                                        h5.px-3.pt-2.mb-0.border-bottom.pb-2 Fade Back
+                                        .card-body.p-3
+                                            .form-controal.mb-3
+                                                textarea.form-control(rows='5')
+                                            .d-flex.justify-content-end
+                                                button.btn.btn-green(type='submit') Submit
+
+   
+
+
+
+        include includes/script.pug
+        script.
+            $('.groub-day .link-list').click(function() {
+                $(this).addClass('active').siblings().removeClass('active');
+
+            });
+            $('.card-list  .card-header .icon').click(function() {
+                $(this).toggleClass('rotate').closest('.card-list').find('.card-body').slideToggle(500);
+
+            });
+            $('#btnFadeBack').click(function() {
+                $('.box-Fade-Back').slideToggle(500);
+                $(this).toggleClass('btn-outline-primary').toggleClass('btn-primary');
+            });
+            $('#btnChangeExercise').click(function() {
+                $('.box-Change-Exercise').slideToggle(500);
+                 $(this).toggleClass('btn-outline-warning').toggleClass('btn-warning');
+            });

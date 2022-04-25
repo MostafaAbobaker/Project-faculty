@@ -1,0 +1,85 @@
+
+<h5 class="text-center">Do you want to use supplements?</h5>
+<div class="d-flex flex-wrap justify-content-center mb-4">
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="supplementsYes" type="radio" name="supplements"/>
+    <label class="form-check-label" for="supplementsYes">
+      <div class="label-body"> 
+        <div>Yes</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="supplementsNo" type="radio" name="supplements"/>
+    <label class="form-check-label" for="supplementsNo">
+      <div class="label-body"> 
+        <div>No</div>
+      </div>
+    </label>
+  </div>
+</div>
+<h5 class="text-center">Do you have a physical limit to supplement use</h5>
+<div class="d-flex flex-wrap justify-content-center mb-4">
+  <div class="form-check gender mx-1">
+    <input class="form-check-input" id="financialproblems" type="radio" name="limitsupplements"/>
+    <label class="form-check-label" for="financialproblems">
+      <div class="label-body"> 
+        <div>Yes, I have financial problems</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-1">
+    <input class="form-check-input" id="nofinancialproblems" type="radio" name="limitsupplements"/>
+    <label class="form-check-label" for="nofinancialproblems">
+      <div class="label-body"> 
+        <div>I have no financial problems</div>
+      </div>
+    </label>
+  </div>
+</div>
+<h5 class="text-center">Do you already have any supplements?</h5>
+<div class="d-flex flex-wrap justify-content-center mb-1">
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="financialproblems" type="radio" name="limitsupplements"/>
+    <label class="form-check-label" for="financialproblems">
+      <div class="label-body"> 
+        <div>Yes</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="nofinancialproblems" type="radio" name="limitsupplements"/>
+    <label class="form-check-label" for="nofinancialproblems">
+      <div class="label-body"> 
+        <div>No</div>
+      </div>
+    </label>
+  </div>
+</div>
+<div class="mb-3">
+  <input class="form-control" type="text" placeholder="What are the supplements?"/>
+</div>
+<div class="event text-center" style="position: relative;bottom: unset;"><a class="btn text-center mx-3 btn-white" data-value="food6.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="food9.html">Next</a></div>
+<script src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/Main.js"> </script>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+          var DataValue = $(this).attr('data-value');
+          //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+          $('#Register_module').load(DataValue);
+      //- console.log(DataValue);
+  
+      });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

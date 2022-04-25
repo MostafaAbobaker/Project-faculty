@@ -1,0 +1,40 @@
+h3.text-center Do you like your diet recipes to change at a rate?
+.form-check
+    input#FastRate.form-check-input(type='radio', name='easy-to-order')
+    label.form-check-label(for='FastRate')
+        .label-body 
+            h4 Fast Rate 
+            p Meals change daily
+        
+.form-check.mb-3
+    input#SlowRate.form-check-input(type='radio', name='easy-to-order')
+    label.form-check-label(for='SlowRate')
+        .label-body 
+            h4 Slow Rate 
+            p Meals are repeated during the week
+        
+
+        
+.event.text-center(style="position: relative;bottom: unset;")
+    a.btn.text-center.mx-3.btn-white( data-value="food5.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="food7.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+        //- console.log(DataValue);
+
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

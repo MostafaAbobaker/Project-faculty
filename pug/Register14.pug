@@ -1,0 +1,86 @@
+h5.text-center What is your level of training?
+.d-flex.flex-wrap.justify-content-center.mb-5
+    .form-check.gender.mx-4
+        input#training_junior.form-check-input(type='radio', name='training')
+        label.form-check-label(for='training_junior')
+            .label-body 
+                div Junior
+    .form-check.gender.mx-4
+        input#training_Average.form-check-input(type='radio', name='training')
+        label.form-check-label(for='training_Average')
+            .label-body 
+                div Average
+    .form-check.gender.mx-4
+        input#training_professional.form-check-input(type='radio', name='training')
+        label.form-check-label(for='training_professional')
+            .label-body 
+                div Professional
+h5.text-center Average exercise time is right for you?
+.d-flex.justify-content-center.mb-5
+    .form-check.gender.mx-4
+        input#more_hour.form-check-input(type='radio', name='exercise')
+        label.form-check-label(for='more_hour')
+            .label-body 
+                div More Hour
+    .form-check.gender.mx-4
+        input#less_hour.form-check-input(type='radio', name='exercise')
+        label.form-check-label(for='less_hour')
+            .label-body 
+                div Less Hour
+    .form-check.gender.mx-4
+        input#half_hour.form-check-input(type='radio', name='exercise')
+        label.form-check-label(for='half_hour')
+            .label-body 
+                div  Half Hour
+
+    
+h5.text-center How many days a week do you exercise?
+.d-flex.flex-wrap.justify-content-center
+    .form-check.gender.mx-4.rounded-circle(style="width:50px; height:50px;")
+        input#two_exercise.form-check-input(type='radio', name='days_exercise')
+        label.form-check-label(for='two_exercise')
+            .label-body 
+                div.h4.m-0 2
+    .form-check.gender.mx-4.rounded-circle(style="width:50px; height:50px;")
+        input#three_exercise.form-check-input(type='radio', name='days_exercise')
+        label.form-check-label(for='three_exercise')
+            .label-body 
+                div.h4.m-0 3
+    .form-check.gender.mx-4.rounded-circle(style="width:50px; height:50px;")
+        input#four_exercise.form-check-input(type='radio', name='days_exercise')
+        label.form-check-label(for='four_exercise')
+            .label-body 
+                div.h4.m-0 4
+    .form-check.gender.mx-4.rounded-circle(style="width:50px; height:50px;")
+        input#five_exercise.form-check-input(type='radio', name='days_exercise')
+        label.form-check-label(for='five_exercise')
+            .label-body 
+                div.h4.m-0 5
+    .form-check.gender.mx-4.rounded-circle(style="width:50px; height:50px;")
+        input#six_exercise.form-check-input(type='radio', name='days_exercise')
+        label.form-check-label(for='six_exercise')
+            .label-body 
+                div.h4.m-0 6
+
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register13.html") Back
+    a.btn.text-center.mx-3.btn-green.next( href="foods.html", ) Next
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+        var DataValue = $(this).attr('data-value');
+        //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+        $('#Register_module').load(DataValue);
+        console.log(DataValue);
+
+    });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

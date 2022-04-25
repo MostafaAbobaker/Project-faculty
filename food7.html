@@ -1,0 +1,75 @@
+
+<h4 class="text-center">Are you allowed to eat meals while at work?</h4>
+<div class="form-check">
+  <input class="form-check-input" id="havefood" type="radio" name="mealswork"/>
+  <label class="form-check-label" for="havefood">
+    <div class="label-body"> 
+      <h4>Yes</h4>
+      <p>Yes, I have time for food</p>
+    </div>
+  </label>
+</div>
+<div class="form-check mb-4">
+  <input class="form-check-input" id="NoMeals" type="radio" name="mealswork"/>
+  <label class="form-check-label" for="NoMeals">
+    <div class="label-body"> 
+      <h4>No </h4>
+      <p>Meals are repeated during the week</p>
+    </div>
+  </label>
+</div>
+<div class="form-floating mb-4">
+  <input class="form-control" id="floatingInput" type="text" placeholder="Full Name"/>
+  <label for="floatingInput">What are your favorite sources of protein?</label>
+</div>
+<h5 class="text-center">How fast when your digestion and burning fat?</h5>
+<div class="d-flex flex-wrap justify-content-center mb-2">
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="slow" type="radio" name="burningfat"/>
+    <label class="form-check-label" for="slow">
+      <div class="label-body"> 
+        <div>slow</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="Average" type="radio" name="burningfat"/>
+    <label class="form-check-label" for="Average">
+      <div class="label-body"> 
+        <div>Average</div>
+      </div>
+    </label>
+  </div>
+  <div class="form-check gender mx-4">
+    <input class="form-check-input" id="Quick" type="radio" name="burningfat"/>
+    <label class="form-check-label" for="Quick">
+      <div class="label-body"> 
+        <div>Quick        </div>
+      </div>
+    </label>
+  </div>
+</div>
+<div class="event text-center" style="position: relative;bottom: unset;"><a class="btn text-center mx-3 btn-white" data-value="food6.html">Back</a><a class="btn text-center mx-3 btn-green next" data-value="food8.html">Next</a></div>
+<script src="js/jquery-3.6.0.min.js"> </script>
+<script src="js/bootstrap.min.js"> </script>
+<script src="js/Main.js"> </script>
+<script>
+  $(document).ready(function(){
+      $('.event a').click(function() {
+          var DataValue = $(this).attr('data-value');
+          //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+          $('#Register_module').load(DataValue);
+      //- console.log(DataValue);
+  
+      });
+      $('input[type="radio"]').click(function(){
+          if($(this).is(":checked")){
+          console.log("Checkbox is checked.");
+          $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+      }
+      else if($(this).is(":not(:checked)")){
+          console.log("Checkbox is unchecked.");
+          }
+      });
+  });
+</script>

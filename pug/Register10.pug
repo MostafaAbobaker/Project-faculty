@@ -1,0 +1,46 @@
+
+h3.text-center Please upload 4 photos from the front The back, the right side, and the left side
+.d-flex.flex-wrap.justify-content-center
+    .form-check.gender.w-25.mx-4.p-0
+        input#body1.form-check-input(type='radio', name='body')
+        label.form-check-label(for='body1')
+            .label-image.w-auto
+                img.w-100(src="images/photo.svg", alt="")
+    .form-check.gender.w-25.mx-4.p-0
+        input#body2.form-check-input(type='radio', name='body')
+        label.form-check-label(for='body2')
+            .label-image.w-auto 
+                img.w-100(src="images/photo.svg", alt="")
+    .form-check.gender.p-0.w-25.mx-4
+        input#body3.form-check-input(type='radio', name='body', )
+        label.form-check-label(for='body3')
+            .label-image.w-auto 
+                img.w-100(src="images/photo.svg", alt="")
+    .form-check.gender.p-0.w-25.mx-4
+        input#body4.form-check-input(type='radio', name='body', )
+        label.form-check-label(for='body4')
+            .label-image.w-auto 
+                img.w-100(src="images/photo.svg", alt="")
+    
+.event.text-center
+    a.btn.text-center.mx-3.btn-white( data-value="Register9.html") Back
+    a.btn.text-center.mx-3.btn-green.next( data-value="Register11.html") Next
+include includes/script.pug
+script.
+    $(document).ready(function(){
+        $('.event a').click(function() {
+            var DataValue = $(this).attr('data-value');
+            //-$('.operation').addClass('show').siblings().not('.filter-container').slideUp(500).removeClass('show');
+            $('#Register_module').load(DataValue);
+            console.log(DataValue);
+        });
+        $('input[type="radio"]').click(function(){
+            if($(this).is(":checked")){
+            console.log("Checkbox is checked.");
+            $(this).parent('.form-check').addClass('checked').siblings().removeClass('checked');
+        }
+        else if($(this).is(":not(:checked)")){
+            console.log("Checkbox is unchecked.");
+            }
+        });
+    });

@@ -1,0 +1,24 @@
+.header-top {
+    background-color: $Color-one;
+    padding: 5px;
+    .icon-social-media {
+        display: flex;
+        .icon {
+            color: $Color-Master;
+            transition: all 0.4s ease-in-out;
+            margin-inline-end: 5px;
+            display: inline-block;
+            &:hover {
+                color: $Color-White;
+            }
+        }
+    }
+    .language {
+        i {
+            color: $Color-Master;
+            display: inline-block;
+            margin-inline-end: 5px;
+        }
+        color: #fff;
+    }
+}
