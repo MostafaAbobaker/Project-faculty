@@ -1,0 +1,143 @@
+doctype html
+html(lang="en")
+    head
+        link(rel="stylesheet", href="../css/owl.carousel.min.css")
+        link(rel="stylesheet", href="../css/owl.theme.default.min.css")
+        include includes/head.pug
+    body 
+        include includes/header.pug
+        
+        // Start Our Blog
+        section.our-blog 
+            .container 
+                h2.text-center Official Blog
+                .row 
+                    .col-lg-3 
+                        .item 
+                            .image 
+                                img.w-100(src="images/image-4-370x300.jpg", alt="")
+                            .item-body 
+                                h4 How To Prepare To Perform Your Best
+                                .groub-info 
+                                    .info-box 
+                                        i.fa-solid.fa-calendar-days.fa-fw
+                                        | Aug 5, 2021
+                                    //- .info-box 
+                                        i.fa-solid.fa-message.fa-fw
+                                        span.number  0 
+                                        | Comment
+                                        
+                    
+                    .col-lg-3 
+                        .item 
+                            .image 
+                                img.w-100(src="images/blog-5-1-300x250.jpg", alt="")
+                            .item-body 
+                                h4 10 Tips How to Prepare Meals Fast and Easy
+                                .groub-info 
+                                    .info-box 
+                                        i.fa-solid.fa-calendar-days.fa-fw
+                                        | Aug 5, 2021
+                                    //- .info-box 
+                                        i.fa-solid.fa-message.fa-fw
+                                        span.number  0 
+                                        | Comment
+                    .col-lg-3 
+                        .item 
+                            .image 
+                                img.w-100(src="images/post1.jpg", alt="")
+                            .item-body 
+                                h4 RHYTHMIC AEROBIC EXERCISES WITH STRETCHING
+                                .groub-info 
+                                    .info-box 
+                                        i.fa-solid.fa-calendar-days.fa-fw
+                                        | Aug 5, 2021
+                                    //- .info-box 
+                                        i.fa-solid.fa-message.fa-fw
+                                        span.number  0 
+                                        | Comment
+                    .col-lg-3 
+                        .item 
+                            .image 
+                                img.w-100(src="images/news-7-370x260.jpg", alt="")
+                            .item-body 
+                                h4 Push Your Fitness Further With Facilities
+                                .groub-info 
+                                    .info-box 
+                                        i.fa-solid.fa-calendar-days.fa-fw
+                                        | Aug 5, 2021
+                                    //- .info-box 
+                                        i.fa-solid.fa-message.fa-fw
+                                        span.number  0 
+                                        | Comment
+
+        // End Our Blog
+        
+
+        // Start Footer Copy Right
+        footer.copy-right
+            .container
+                .d-flex.justify-content-center
+                    p Design by   
+                    a(href='#')  Mostafa Abobakr 
+                    p   &copy;  All rights reserved | 2022.
+        // End Footer Copy Right
+
+
+
+
+
+
+
+
+
+
+        // Start Aside bar fixed
+        aside.aside-bar-fixed
+            ul.list-unstyled 
+                li 
+                    a(href="TrainingBackpain.html") 
+                        img(src="images/pain.png", alt="")
+                        span.text Back pain
+                li 
+                    a(href="TrainingRoughness.html") 
+                        img(src="images/pain-in-joints.png", alt="")
+                        span.text Roughness
+                li 
+                    a(href="DietObese.html") 
+                        img(src="images/fat.png", alt="")
+                        span.text Obese
+                li 
+                    a(href="") 
+                        img(src="images/body-variant.png", alt="")
+                        span.text Thinness
+        // End Aside bar fixed
+
+
+
+
+        include includes/script.pug
+        script(src="../js/owl.carousel.min.js") 
+        script.
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            });
+            $('.card-item .play-icon').click(function (){
+                var mySrc =  $(this).attr('data-video');
+                $(this).closest('.card-item').addClass('active').siblings().removeClass('active');
+                $('#iframeVideo').attr('src', mySrc);
+            });
+        

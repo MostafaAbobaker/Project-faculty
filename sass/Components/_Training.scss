@@ -10,8 +10,15 @@
     .box-Training-body {
         height: 82vh;
         overflow-y: auto;
+        /* display: none; */
         &.for-tabs {
             height: 76vh;
+        }
+        &.d-hide {
+            display: none;
+        }
+        &.d-show {
+            display: block;
         }
     }
     .header {
@@ -87,6 +94,8 @@
             border-bottom: 1px solid rgba($Color-White, 0.2);
             h5 {
                 margin: 0;
+                font-size: 15px;
+                font-weight: bold;
             }
             .icon {
                 cursor: pointer;
@@ -121,6 +130,7 @@
                     align-items: center;
                     padding-inline-start: 10px;
                     .info {
+                        width: calc(100% - 50px);
                         h5 {
                             font-size: 14px;
                             margin-bottom: 5px;
@@ -151,7 +161,7 @@
                     }
                 }
                 &.active {
-                    background-color: rgba($Color-Master, .50);
+                    background-color: rgba($Color-Master, .40);
                 }
                 &:not(.active):hover {
                     background-color: rgba($Color-Master, .1);
@@ -204,6 +214,118 @@
             font-weight: normal;
             color: #bbb;
         }
+    }
+    .form-floating {
+        label {
+            font-weight: bold;
+            /* top: 8px; */
+        }
+        .icon {
+            position: absolute;
+            inset-inline-end: 15px;
+            top: 14px;
+            transition: all 0.4s ease-in-out;
+            color: #999;
+            width: 40px;
+            height: 40px;
+            img {
+                height: 100%;
+                filter: invert(61%) sepia(0%) saturate(273%) hue-rotate(166deg) brightness(99%) contrast(94%);
+            }
+            svg {
+                width: 40px;
+                height: 40px;
+                fill: #999;
+                transition: all 0.4s ease-in-out;
+                path {
+                    fill: #999;
+                }
+            }
+        }
+        .form-control,
+        .form-select {
+            /* border-radius: 10px;
+            border: 3px solid rgba(#CCC, .5);
+            box-shadow: 0 0 7px rgba(#000, .2); */
+            /* height: calc(4.5rem + 2px); */
+            &:focus {
+                &~label {
+                    /* transform: scale(0.85) translateY(-1rem) translateX(0.15rem); */
+                    color: $Color-Master;
+                }
+                &~.icon {
+                    color: $Color-Master;
+                }
+                img {
+                    filter: invert(53%) sepia(96%) saturate(305%) hue-rotate(39deg) brightness(92%) contrast(95%);
+                }
+            }
+            &:not(:placeholder-shown) {
+                &~label {
+                    transform: scale(0.85) translateY(-1rem) translateX(0.15rem);
+                    color: $Color-Master;
+                }
+                &~.icon {
+                    color: $Color-Master;
+                    opacity: 1;
+                    svg {
+                        fill: $Color-Master;
+                        path {
+                            fill: $Color-Master;
+                        }
+                    }
+                    img {
+                        filter: invert(53%) sepia(96%) saturate(305%) hue-rotate(39deg) brightness(92%) contrast(95%);
+                    }
+                }
+            }
+        }
+        &.data-birthday {
+            .form-control {
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f1fd";
+                    position: absolute;
+                    top: 10px;
+                    right: 15px;
+                    z-index: 0;
+                    font-size: 32px;
+                    color: #999;
+                }
+                &::-webkit-calendar-picker-indicator {
+                    opacity: 0; //removes awful triangle indicator
+                    position: relative;
+                    z-index: 2;
+                    width: 50%;
+                    background-color: transparent;
+                }
+                &:focus {
+                    &::after {
+                        color: $Color-Master;
+                    }
+                }
+            }
+        }
+    }
+    .form-floating {
+        .form-control,
+        .form-select {
+            background-color: #43455b;
+            border: none;
+            margin: 5px 0;
+            color: #fff;
+            &:focus {
+                background-color: #43455b;
+                border-color: $Color-Master;
+                outline: 0;
+                color: #fff;
+                box-shadow: 0 0 0 0.25rem rgba($Color-Master, .25);
+            }
+        }
+        // label {
+        //     color: #333;
+        // }
     }
 }
 

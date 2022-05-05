@@ -7,16 +7,391 @@ html(lang="en")
         section.overview 
             .container-fluid 
                 .row 
-                    .col-lg-9
-                        .content-chart 
-                            .header 
-                                h3.heading Settings 
-                                .your-gool 
-                                    h5.title 	ONLY 3 MONTHS AND 15 DAYS		
-                                    small 	 UNTIL YOU REACH YOUR GOAL!					
-			
-       
-                    .col-lg-3       
+                    .col-lg-12 
+                        .box-Training.p-3  
+                            h4.mb-3 User Profile 
+                            .d-flex.flex-wrap 
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Full Name 
+                                        .icon 
+                                            i.fas.fa-user.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-3
+                                        input.form-control(type='Password', placeholder='Password')
+                                        label(for='') Password
+                                        .icon 
+                                            i.fas.fa-key.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='email', placeholder='E-mail')
+                                        label(for='floatingInput') E-mail
+                                        .icon 
+                                            i.far.fa-envelope.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-3
+                                        input.form-control(type='text', placeholder='Your Phone')
+                                        label(for='') Your Phone
+                                        .icon 
+                                            i.fas.fa-mobile-alt.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Your Country')
+                                        label(for='floatingInput') Your Country
+                                        .icon 
+                                            i.fas.fa-globe.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-3
+                                        input.form-control(type='text', placeholder='Your City')
+                                        label(for='') Your City
+                                        .icon 
+                                            i.fas.fa-city.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating
+                                        select#floatingSelect.form-select(aria-label='Gender')
+                                            option(selected='') Gender
+                                            option(value='1') Male
+                                            option(value='2') Female
+                                        label(for='floatingSelect') Gender
+                                        .icon 
+                                            i.fas.fa-venus-mars.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-3.data-birthday
+                                        input.form-control(type='date', placeholder='Your City')
+                                        label(for='') How old are you ?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Your height in cm?
+                                        .icon 
+                                            i.fas.fa-text-height.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Your weight in kg?
+                                        .icon 
+                                            i.fas.fa-weight.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Target weight in kg?
+                                        .icon 
+                                            include svg/targetweight.svg
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Your weight in kg?
+                                        .icon 
+                                            i.fas.fa-weight.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Chest size
+                                        .icon 
+                                            img(src="images/Arm/Chest.webp", alt="")
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Shoulder size ?
+                                        .icon 
+                                            img(src="images/Arm/shest.webp", alt="")
+                                
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Arm size?
+                                        .icon 
+                                            img(src="images/Arm/Arm.webp", alt="")
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Waist size in cm?
+                                        .icon 
+                                            img(src="images/Arm/Waist.webp", alt="")
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Thigh size in cm?
+                                        .icon 
+                                            img(src="images/Arm/leag.webp", alt="")
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') Body fat in kg?
+                                        .icon 
+                                            i.fas.fa-weight.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating
+                                        select#floatingSelect.form-select(aria-label='Choose your body shape')
+                                            option(selected='')  Choose your body shape
+                                            option(value='1') 1 BodyBuilder
+                                            option(value='2') 2 Semi Bodybuilder
+                                            option(value='2') 3 Fit
+                                            option(value='2') 4 Semi Fit
+                                            option(value='2') 5 Fat
+                                            option(value='2') 6 Big Fat 
+                                        label(for='floatingSelect') Choose your body shape
+                                        .icon 
+                                            img(src="images/Arm/fat.png", alt="")
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What time  wake up from sleep?
+                                        .icon 
+                                            i.far.fa-clock.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What  time  go to work?
+                                        .icon 
+                                            i.far.fa-clock.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What is your work environment?
+                                        .icon 
+                                            i.far.fa-building.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What time finish the work?
+                                        .icon 
+                                            i.far.fa-clock.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What   time to go exercise?
+                                        .icon 
+                                            i.far.fa-clock.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What time is bed?
+                                        .icon 
+                                            i.far.fa-clock.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating
+                                        select#sport.form-select(aria-label='sport')
+                                            option(selected='') Do you any other sports?
+                                            option(value='1') Yes
+                                            option(value='2') No
+                                        label(for='sport') Do you any other sports?
+                                        .icon 
+                                            i.fas.fa-futbol.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput') What type of sport?
+                                        .icon 
+                                            i.fas.fa-futbol.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating
+                                        select#surgery.form-select(aria-label='surgery')
+                                            option(selected='') Have you had any surgeries ?
+                                            option(value='1') Yes
+                                            option(value='2') No
+                                        label(for='surgery') Have you had any surgeries ?
+                                        .icon 
+                                            i.fas.fa-user-md.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput')  What is the surgery?
+                                        .icon 
+                                            i.fas.fa-user-md.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#sickness.form-select(aria-label='sickness')
+                                            option(selected='') Do you has any chronic diseases?
+                                            option(value='1') Yes
+                                            option(value='2') No
+                                        label(for='sickness') Do you has any chronic diseases?
+                                        .icon 
+                                            i.fas.fa-user-md.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput')  what kind of sickness?
+                                        .icon 
+                                            i.fas.fa-user-md.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#sickness.form-select(aria-label='sickness')
+                                            option(selected='') What is your level of training?
+                                            option(value='1') Junior
+                                            option(value='2') Average
+                                            option(value='3') Professional
+                                        label(for='sickness') What is your level of training?
+                                        .icon 
+                                            i.fas.fa-dumbbell.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#sickness.form-select(aria-label='sickness')
+                                            option(selected='') Average exercise time ?
+                                            option(value='1') More Hour
+                                            option(value='2') Less Hour
+                                            option(value='3') Half Hour
+                                        label(for='sickness') Average exercise time ?
+                                        .icon 
+                                            i.far.fa-clock.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#sickness.form-select(aria-label='sickness')
+                                            option(selected='')  How many days a week  exercise?
+                                            option(value='1') 2 Days
+                                            option(value='2') 3 Days
+                                            option(value='3') 4 Days
+                                            option(value='4') 5 Days
+                                            option(value='5') 6 Days
+                                        label(for='sickness')  How many days a week  exercise?
+                                        .icon 
+                                            i.far.fa-calendar-alt.fa-fw.fa-2x
+                                
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#interested.form-select(aria-label='interested')
+                                            option(selected='')  What are we interested ?
+                                            option(value='1') Exercises and Nutrition
+                                            option(value='2') Exercise Program
+                                            option(value='3') Nutrition Program
+                                        label(for='interested')  What are we interested ?
+                                        .icon 
+                                            img(src="pug/svg/Body.svg", alt="")
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#WhatGoal.form-select(aria-label='WhatGoal')
+                                            option(selected='')  What is the goal ?
+                                            option(value='1') Losing weight and Fat
+                                            option(value='2') Gain muscle Mass
+                                            option(value='3') Increase Fitness
+                                        label(for='WhatGoal')  What is the goal ?
+                                        .icon 
+                                            i.fas.fa-weight.fa-fw.fa-2x
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#WhereExercise.form-select(aria-label='WhereExercise')
+                                            option(selected='')  Where do you exercise?
+                                            option(value='1') I work out at Home
+                                            option(value='2') I work out in the Gym
+                                        label(for='WhereExercise')  Where do you exercise?
+                                        .icon 
+                                            i.fas.fa-home.fa-fw.fa-2x
+                            h4.mb-3 User Profile  For Foods
+                            .d-flex.flex-wrap      
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  What is your type of diet?
+                                            option(value='1') Normal
+                                            option(value='2') vegetarian
+                                            option(value='3') Vision
+                                        label(for='typeDiet')  What is your type of diet?
+                                        
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#allergies.form-select(aria-label='allergies')
+                                            option(selected='')  Do you have any allergies ?
+                                            option(value='Milk') Milk
+                                            option(value='fish') fish
+                                            option(value='chicken') chicken
+                                            option(value='Nuts') Nuts
+                                            option(value='cheese') cheese
+                                            option(value='Yogurt') Yogurt
+                                            option(value='Apple') Apple
+                                            option(value='Orange') Orange
+                                            option(value='Kiwi') Kiwi
+                                            option(value='Strawberry') Strawberry
+                                            option(value='egg') Egg
+                                            option(value='Meat') Meat
+                                            option(value='Pineapple') Pineapple
+                                            option(value='Peach') Peach
+                                            option(value='Oats') Oats
+                                            option(value='Granola') Granola
+                                            option(value='Potatos') Potatos
+                                            option(value='Shrimp') Shrimp
+                                            option(value='Tuna') Tuna
+                                        label(for='allergies')  Do you have any allergies ?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  What is your budget for the diet?
+                                            option(value='1') Economic
+                                            option(value='2') Expensive
+                                        label(for='typeDiet')  What is your budget for the diet?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Do you prefer easy-to-order meals ?
+                                            option(value='1') Yes
+                                            option(value='2') No
+                                        label(for='typeDiet')  Do you prefer easy-to-order meals ?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Do you prefer to eat a meal every day?
+                                            option(value='1') Three meals and two snacks 
+                                            option(value='2') Three meals and snacks(The best)  
+                                            option(value='3') Breakfast, lunch and dinner
+                                            option(value='4') Two meals and a snack(intermittent fasting) 
+                                        label(for='typeDiet')  Do you prefer to eat a meal every day?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Do you like your diet to change ?
+                                            option(value='1') Fast Rate 
+                                            option(value='2') Slow Rate 
+                                        label(for='typeDiet')  Do you like your diet to change ?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Are you allowed to eat meals  at work?
+                                            option(value='1') Yes 
+                                            option(value='2') No
+                                        label(for='typeDiet')  Are you allowed to eat meals  at work?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput')  What  favorite  of protein?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  How fast is digestion?
+                                            option(value='1') Slow 
+                                            option(value='2') Average
+                                            option(value='3') Quick
+                                        label(for='typeDiet')  How fast is digestion?  
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Do you want to use supplements?
+                                            option(value='1') Yes 
+                                            option(value='2') No
+                                        label(for='typeDiet')  Do you want to use supplements?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Do you have a physical limit?
+                                            option(value='1') Yes, I have financial problems
+                                            option(value='2') I have no financial problems
+                                        label(for='typeDiet')  Do you have a physical limit?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        select#typeDiet.form-select(aria-label='type diet')
+                                            option(selected='')  Do you already have any supplements?
+                                            option(value='1') Yes 
+                                            option(value='2') No
+                                        label(for='typeDiet')  Do you already have any supplements?
+                                .col-lg-3.px-3
+                                    .form-floating.mb-4
+                                        input#floatingInput.form-control(type='text', placeholder='Full Name')
+                                        label(for='floatingInput')  What are the supplements?
+
+                            .d-flex.justify-content-end
+                                a.btn.text-center.mx-3.btn-green.next( ) Save Change    
+                                
+
+                         
 
 
 

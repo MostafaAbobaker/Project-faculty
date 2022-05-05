@@ -537,3 +537,49 @@ main.main-section {
 }
 
 // end Team Work
+
+/* Start Our Partener  */
+
+.ourPartener {
+    padding: 60px 0;
+    background: url(../images/background_03_01.png) no-repeat center center;
+    background-size: cover;
+    h2 {
+        font-size: 32px;
+        position: relative;
+        font-weight: bold;
+        margin-bottom: 40px;
+        position: relative;
+        z-index: 2;
+        &::before {
+            content: 'Our Partners';
+            position: absolute;
+            top: -20px;
+            inset-inline-start: 50%;
+            transform: translateX(-50%);
+            font-size: 30px;
+            font-weight: bold;
+            color: $Color-Master;
+            font-family: "great sejagad";
+        }
+    }
+    .owl-carousel {
+        display: flex;
+        align-items: center;
+        .image {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: #f2f2f2; */
+            padding: 20px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+/* End Our Partener  */

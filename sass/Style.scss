@@ -39,11 +39,37 @@ textarea.form-control {
     background-color: #43455b;
     border: none;
     margin: 5px 0;
+    color: #fff;
     &:focus {
         background-color: #43455b;
         border-color: $Color-Master;
         outline: 0;
+        color: #fff;
         box-shadow: 0 0 0 0.25rem rgba($Color-Master, .25);
+    }
+}
+
+
+/* .show {
+    display: block!important;
+} */
+
+.overlay {
+    position: fixed;
+    background-color: rgba(#333, 0.95);
+    z-index: 9;
+    top: 0;
+    inset-inline-start: 80px;
+    width: calc(100% - 80px);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $Color-Master;
+    h1 {
+        font-size: 52px;
+        font-weight: bold;
+        margin: 0;
     }
 }
 

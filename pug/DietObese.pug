@@ -1,0 +1,1147 @@
+- var pageTitl = "Diet";
+html(lang="en")
+    head
+        include includes/head.pug
+    body 
+        include includes/asideBar.pug
+        section.overview 
+            .container-fluid 
+                .row 
+                    .col-lg-4
+                        .box-Training  
+                            h4.header Nutrition
+                            ul.list-unstyled.groub-day
+                                li.link-list.active(data-type="#Saturday") Sat
+                                li.link-list(data-type="#Sunday") Sun
+                                li.link-list(data-type="#Monday") Mon
+                                li.link-list(data-type="#Tuesday") Tues
+                                li.link-list(data-type="#Wednesday") Wed
+                                li.link-list(data-type="#Thursday") Thurs
+                                li.link-list(data-type="#Friday") Fri
+                            // Oll Meal calaries and Weight gave (https://www.fatsecret.com/calories-nutrition) 
+                            // This Nutrition git to (https://www.lybrate.com/topic/obesity-diet-chart)    
+                            #Saturday.box-Training-body
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/eggwhites.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 3 Egg Whites 
+                                                    .weight 
+                                                        span.weight-number 90 grams
+                                                        span.calaries 154.8 kcal
+                                                a.play-icon(data-video="images/arm/eggwhites.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Toasted.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Toasted Brown Bread
+                                                    .weight 
+                                                        span.weight-number 24 grams
+                                                        span.calaries 75 kcal
+                                                a.play-icon(data-video="images/arm/Toasted.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/milk.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 Cup Low Fat Milk (no sugar)
+                                                    .weight 
+                                                        span.weight-number 123  grams
+                                                        span.calaries 51 kcal
+                                                a.play-icon(data-video="images/arm/milk.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/green-tea.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Green Tea 
+                                                    .weight 
+                                                        span.weight-number (100–200 mg)
+                                                        span.calaries 2 kcal
+                                                a.play-icon(data-video="images/arm/green-tea.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/dal1_2000_1125.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Lentil Soup dal 
+                                                    span Easy yellow Indian lentil dhal simmers the yellow lentils in vegetable broth, turmeric, and cayenne ...‏
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 75 kcal
+                                                a.play-icon(data-video="images/arm/dal1_2000_1125.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/vegetablesoup.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Vegetable Soup
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 42 kcal
+                                                a.play-icon(data-video="images/arm/vegetablesoup.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Pumpkin.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Piece  Pumpkin 
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 26 kcal
+                                                a.play-icon(data-video="images/arm/Pumpkin.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                    
+                            #Sunday.box-Training-body.d-hide
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/ZaatarManoushe.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Zaatar Manoushe
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 191 kcal
+                                                a.play-icon(data-video="images/arm/ZaatarManoushe.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                        
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/coconut.gif", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Coconut Water
+                                                    .weight 
+                                                        span.weight-number (100 mg)
+                                                        span.calaries 46 kcal
+                                                a.play-icon(data-video="images/arm/coconut.gif") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/dal1_2000_1125.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Lentil Soup dal 
+                                                    span Easy yellow Indian lentil dhal simmers the yellow lentils in vegetable broth, turmeric, and cayenne ...‏
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 75 kcal
+                                                a.play-icon(data-video="images/arm/dal1_2000_1125.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChickenCurry.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Chicken Curry
+                                                    .weight 
+                                                        span.weight-number 125 grams
+                                                        span.calaries 160 kcal
+                                                a.play-icon(data-video="images/arm/ChickenCurry.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/CupPomegranate.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Pomegranate
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 154 kcal
+                                                a.play-icon(data-video="images/arm/CupPomegranate.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Beans.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Beans dal
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 137 kcal
+                                                a.play-icon(data-video="images/arm/Beans.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                
+                            #Monday.box-Training-body.d-hide
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/besancheela.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 2 Besan Cheela
+                                                    .weight 
+                                                        span.weight-number 2 
+                                                        span.calaries 105 kcal
+                                                a.play-icon(data-video="images/arm/besancheela.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                        
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/apple.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Apple
+                                                    .weight 
+                                                        span.weight-number (100 mg)
+                                                        span.calaries 117 kcal
+                                                a.play-icon(data-video="images/arm/apple.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/lentils.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 lentils with a meal dal 
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 323 kcal
+                                                a.play-icon(data-video="images/arm/lentils.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/tomato.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 cup tomato soup
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 102 kcal
+                                                a.play-icon(data-video="images/arm/tomato.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Vegetable.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Cup Carrot Peas Vegetable 
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 238 kcal
+                                                a.play-icon(data-video="images/arm/Vegetable.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                
+                            #Tuesday.box-Training-body.d-hide
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/Oats.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Oats
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 389 kcal
+                                                a.play-icon(data-video="images/arm/Oats.png") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/milk.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 Cup Low Fat Milk (no sugar)
+                                                    .weight 
+                                                        span.weight-number 123  grams
+                                                        span.calaries 51 kcal
+                                                a.play-icon(data-video="images/arm/milk.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x        
+                                        
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/melon.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 cup musk melon
+                                                    .weight 
+                                                        span.weight-number (100 mg)
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/melon.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Moroccan.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Moroccan Black-Eyed
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 323 kcal
+                                                a.play-icon(data-video="images/arm/Moroccan.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/vegetablesoup.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Vegetable Soup
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 42 kcal
+                                                a.play-icon(data-video="images/arm/vegetablesoup.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/okra.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Okra
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 31 kcal
+                                                a.play-icon(data-video="images/arm/okra.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                
+                            #Wednesday.box-Training-body.d-hide
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/cheese.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed cheese sandwich
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 389 kcal
+                                                a.play-icon(data-video="images/arm/cheese.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/orange.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Orange
+                                                    .weight 
+                                                        span.weight-number 100  Mg
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/orange.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x        
+                                        
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/RayebMilk.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 cup Rayeb Milk
+                                                    .weight 
+                                                        span.weight-number (100 mg)
+                                                        span.calaries 98 kcal
+                                                a.play-icon(data-video="images/arm/RayebMilk.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/chana.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 cup white chana
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 75 kcal
+                                                a.play-icon(data-video="images/arm/chana.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/fish.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Fish 
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 112 kcal
+                                                a.play-icon(data-video="images/arm/fish.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/milk.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 Cup Low Fat Milk (no sugar)
+                                                    .weight 
+                                                        span.weight-number 123  grams
+                                                        span.calaries 51 kcal
+                                                a.play-icon(data-video="images/arm/milk.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/cauliflower .jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Cup cauliflower vegetable
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 25 kcal
+                                                a.play-icon(data-video="images/arm/cauliflower .jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                
+                            #Thursday.box-Training-body.d-hide
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/Oats.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Oats
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 389 kcal
+                                                a.play-icon(data-video="images/arm/Oats.png") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x       
+                                        
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/Watermelon.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Piece  Watermelon
+                                                    .weight 
+                                                        span.weight-number (100 mg)
+                                                        span.calaries 98 kcal
+                                                a.play-icon(data-video="images/arm/Watermelon.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/chana.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 cup white chana
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 75 kcal
+                                                a.play-icon(data-video="images/arm/chana.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/legumesalad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup legume salad
+                                                    .weight 
+                                                        span.weight-number 123  grams
+                                                        span.calaries 51 kcal
+                                                a.play-icon(data-video="images/arm/legumesalad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/SweetPotato.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Sweet Potato
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 25 kcal
+                                                a.play-icon(data-video="images/arm/SweetPotato.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                
+                            #Friday.box-Training-body.d-hide
+                                .card-list 
+                                    .card-header
+                                        h5 Breakfast (8:00-8:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active 
+                                            .image 
+                                                img.w-100(src="images/arm/Oats.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Oats
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 389 kcal
+                                                a.play-icon(data-video="images/arm/Oats.png") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/strawberries.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 3-4 strawberries
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/strawberries.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x       
+                                        
+                                .card-list     
+                                    .card-header
+                                        h5 Snacks (11:00-11:30AM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/arm/coconut.gif", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Cup Coconut Water
+                                                    .weight 
+                                                        span.weight-number (100 mg)
+                                                        span.calaries 46 kcal
+                                                a.play-icon(data-video="images/arm/coconut.gif") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Lunch (2:00-2:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Moroccan.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Moroccan Black-Eyed
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 323 kcal
+                                                a.play-icon(data-video="images/arm/Moroccan.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Yogurt.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1/2 cup low fat Yogurt
+                                                    .weight 
+                                                        span.weight-number 55 grams
+                                                        span.calaries 62 kcal
+                                                a.play-icon(data-video="images/arm/Yogurt.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Evening (4:00-4:30PM)
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/fruitsalad.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 cup fruit salad
+                                                    .weight 
+                                                        span.weight-number 123  grams
+                                                        span.calaries 51 kcal
+                                                a.play-icon(data-video="images/arm/fruitsalad.webp") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list    
+                                    .card-header
+                                        h5 Dinner 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw 
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/zucchini.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 zucchini
+                                                    .weight 
+                                                        span.weight-number 100 mg
+                                                        span.calaries 25 kcal
+                                                a.play-icon(data-video="images/arm/zucchini.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/ChapatiBread.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 1 Chapati Bread
+                                                    .weight 
+                                                        span.weight-number 85 grams
+                                                        span.calaries 60 kcal
+                                                a.play-icon(data-video="images/arm/ChapatiBread.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/arm/Salad.jpg", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Mixed Salad Greens
+                                                    .weight 
+                                                        span.weight-number 100 grams
+                                                        span.calaries 17 kcal
+                                                a.play-icon(data-video="images/arm/Salad.jpg") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x            
+                                
+                    .col-lg-8    
+                        .slide-show
+                            //- video( controls='')
+                                source(src='../video/mov_bbb.mp4', type='video/mp4')
+                                source(src='../video/mov_bbb.mp4', type='video/ogg')
+                                |   Your browser does not support the video tag.
+                            .vedio-box
+                                .image(style="height: 550px !important; width: 100%; text-align: center")
+                                    img#iframeVideo.h-100(src="images/arm/eggwhites.webp", alt="", )
+                                //iframe( src='https://www.youtube.com/embed/UgA_5V3Jro0', title='YouTube video player', frameborder='0', allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture', allowfullscreen='', )
+                            
+
+        // Modal
+        #exampleModal.modal.fade(tabindex='-1', aria-labelledby='exampleModalLabel', aria-hidden='true')
+            .modal-dialog.modal-dialog-centered
+                .modal-content.bg-dark
+                    .modal-body
+                        h2.h2.text-center Please Register Now
+
+                    .modal-footer.justify-content-center
+                        button.btn.btn-white(type='button', data-bs-dismiss='modal') Close
+                        a.btn.btn-green(href='login.html') Register Now
+
+
+        include includes/script.pug
+        script.
+            $('.card-item .play-icon').click(function (){
+                var mySrc =  $(this).attr('data-video');
+                $(this).closest('.card-item').addClass('active').siblings().removeClass('active');
+                $('#iframeVideo').attr('src', mySrc);
+            });
+            $('.aside-bar .link-list a').click(function (event) {
+                $("#exampleModal").modal('show');
+                event.preventDefault();
+            });
+            
+            $('.groub-day .link-list').click(function () {
+                $(this).addClass('active').siblings().removeClass('active');
+                var textHtml =  $(this).attr('data-type');
+                console.log(textHtml);
+                $(textHtml).addClass('d-show').removeClass('d-hide').siblings().removeClass('d-show').addClass('d-hide');
+            });

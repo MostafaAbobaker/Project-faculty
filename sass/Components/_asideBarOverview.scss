@@ -6,6 +6,7 @@ aside.aside-bar {
     position: fixed;
     top: 0;
     inset-inline-start: 0;
+    z-index: 9999;
     a.link-head-page {
         padding: 20px 10px 80px;
         display: block;
