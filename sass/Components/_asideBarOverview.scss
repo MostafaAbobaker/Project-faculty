@@ -8,7 +8,7 @@ aside.aside-bar {
     inset-inline-start: 0;
     z-index: 9999;
     a.link-head-page {
-        padding: 20px 10px 80px;
+        padding: 20px 10px 50px;
         display: block;
     }
     ul.list-unstyled {
@@ -29,6 +29,11 @@ aside.aside-bar {
                 margin-bottom: 2px;
                 font-weight: bold;
                 transition: all 0.4s ease-in-out;
+                i {
+                    font-size: 1.5em;
+                    display: block;
+                    margin: 0 auto 5px;
+                }
                 .text {
                     font-size: .8em;
                     margin-top: 5px;

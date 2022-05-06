@@ -1106,7 +1106,7 @@ aside.aside-bar {
   z-index: 9999;
 }
 aside.aside-bar a.link-head-page {
-  padding: 20px 10px 80px;
+  padding: 20px 10px 50px;
   display: block;
 }
 aside.aside-bar ul.list-unstyled li.active a {
@@ -1123,6 +1123,11 @@ aside.aside-bar ul.list-unstyled li a {
   margin-bottom: 2px;
   font-weight: bold;
   transition: all 0.4s ease-in-out;
+}
+aside.aside-bar ul.list-unstyled li a i {
+  font-size: 1.5em;
+  display: block;
+  margin: 0 auto 5px;
 }
 aside.aside-bar ul.list-unstyled li a .text {
   font-size: 0.8em;
@@ -1570,6 +1575,9 @@ section.our-blog .Blog-details .chat-container .media .media-body::before {
 }
 
 /* End section.our-blog */
+.Big-Store .mix {
+  display: none;
+}
 .Big-Store.store-page h2 {
   font-size: 32px;
   position: relative;
@@ -1658,6 +1666,103 @@ section.our-blog .Blog-details .chat-container .media .media-body::before {
 .Big-Store .card-box .card-body .badge.active {
   background-color: #7ba62c;
   color: #fff;
+}
+
+.equipment-page h2 {
+  font-size: 32px;
+  position: relative;
+  font-weight: bold;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 2;
+}
+.equipment-page h2::before {
+  content: "Store";
+  position: absolute;
+  top: -20px;
+  inset-inline-start: 6%;
+  font-size: 30px;
+  font-weight: bold;
+  color: #7BA62C;
+  font-family: "great sejagad";
+}
+.equipment-page .button-groub {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.equipment-page .button-groub .btn {
+  border: 1px solid #7BA62C;
+  min-width: 100px;
+  background-color: #fff;
+  transition: all 0.4s ease-in-out;
+}
+.equipment-page .button-groub .btn.active {
+  background-color: #7BA62C;
+  color: #fff;
+}
+.equipment-page .button-groub .btn:not(.active):hover {
+  background-color: #c7df9c;
+}
+.equipment-page .mix {
+  display: none;
+}
+.equipment-page .item {
+  background-color: #27293D;
+  border: 1px solid rgba(32, 33, 34, 0.1);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(32, 33, 34, 0.1);
+  margin-bottom: 20px;
+}
+.equipment-page .item .image {
+  border-bottom: 1px solid rgba(32, 33, 34, 0.1);
+  background-color: #fff;
+  border-start-start-radius: 5px;
+  border-start-end-radius: 5px;
+}
+.equipment-page .item .image img {
+  object-fit: scale-down;
+  height: 240px;
+  border-start-start-radius: 10px;
+  border-start-end-radius: 10px;
+}
+.equipment-page .item .item-body {
+  padding: 10px;
+}
+.equipment-page .item .item-body h4 {
+  font-size: 14px;
+  display: -webkit-box;
+  height: 50px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.625;
+}
+.equipment-page .item .item-body .price {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 5px;
+  margin-bottom: 5px;
+}
+.equipment-page .item .item-body .price h3 {
+  font-size: 18px;
+}
+.equipment-page .item .item-body .add {
+  display: flex;
+  justify-content: center;
+}
+.equipment-page .item .item-body .add .btn {
+  background-color: rgba(123, 166, 44, 0.2);
+  border: 1px solid #7BA62C;
+  border-radius: 25px;
+  transition: all 0.4s ease-in-out;
+  color: #fff;
+}
+.equipment-page .item .item-body .add .btn:hover {
+  background-color: #7BA62C;
+  color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /* Start .box-Training  */

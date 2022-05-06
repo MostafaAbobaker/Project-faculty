@@ -201,101 +201,101 @@ html(lang="en")
                     .col-lg-6
                     .col-lg-6
                         .button-groub   
-                            button.btn.active All
-                            button.btn Supplements
-                            button.btn Clothes
-                            button.btn Machines
-                            button.btn Accessories
+                            button.btn.active.filter(data-filter="all") All
+                            button.btn.filter(data-filter=".category-Supplements") Supplements
+                            button.btn.filter(data-filter=".category-Clothes") Clothes
+                            button.btn.filter(data-filter=".category-Machines") Machines
+                            button.btn.filter(data-filter=".category-Accessories") Accessories
             .container-fluid 
-                .row
-                    .col-lg-2
+                #Container.row
+                    .col-lg-2.mix.category-Supplements 
                         .item   
                             .image  
                                 img.w-100(src="images/vitamin_d3_k2_120_vcaps_1.jpg", alt="")
                             .item-body 
                                 h4 NOW Foods Vitamin D-3 & K-2, 120 VCaps
-                                .price 
+                                //.price 
                                     h3.new 750.04
                                         sub.Currency EGP
                                     del.old 1250.00
                                         sub.Currency EGP
                                 .add 
-                                    button.btn 
+                                    a.btn(href="https://www.amazon.com/NOW-Vitamin-D-3-K-2-Capsules/dp/B0019QT9LA" target="_blank")  
                                         i.fa-solid.fa-bag-shopping.fa-fw 
                                         |  Recommended
-                    .col-lg-2
+                    .col-lg-2.mix.category-Clothes 
                         .item   
                             .image  
                                 img.w-100(src="images/61WlB6GOlZL._AC_SX679_.jpg", alt="")
                             .item-body 
                                 h4 Mens Gym Stringer Tank Top Bodybuilding Athletic Workout Muscle Quick Dry Fitness Vest L
-                                .price 
+                                //.price 
                                     h3.new 750.04
                                         sub.Currency EGP
                                     del.old 1250.00
                                         sub.Currency EGP
                                 .add 
-                                    button.btn 
+                                    a.btn(href="https://www.amazon.eg/-/en/Stringer-Bodybuilding-Athletic-Workout-Fitness/dp/B091CXLXYL/ref=pd_sbs_sccl_1_1/257-4095186-6695059?pd_rd_w=Xcd2j&pf_rd_p=8fcab8dd-8489-4f9f-910f-0128650e7a7c&pf_rd_r=KYZZBN4XTJ1BWBZ7SNKN&pd_rd_r=5154f4a8-4624-4c74-a61b-8c6bc3eca515&pd_rd_wg=BCQaU&pd_rd_i=B091DN55W5&psc=1" target="_blank") 
                                         i.fa-solid.fa-bag-shopping.fa-fw 
                                         |  Recommended
-                    .col-lg-2
+                    .col-lg-2.mix.category-Machines 
                         .item   
                             .image  
                                 img.w-100(src="images/51q-1kB8QaL._AC_.jpg", alt="")
                             .item-body 
                                 h4 Korix Multi-functional Home Gym Station - With Weights 65 KG
-                                .price 
+                                //.price 
                                     h3.new 750.04
                                         sub.Currency EGP
                                     del.old 1250.00
                                         sub.Currency EGP
                                 .add 
-                                    button.btn 
+                                    a.btn(href="https://www.amazon.eg/-/en/Korix-KX-1800C-Three-Stations-Home-Weights/dp/B08WJPQWMN" target="_blank") 
                                         i.fa-solid.fa-bag-shopping.fa-fw 
                                         |  Recommended
-                    .col-lg-2
+                    .col-lg-2.mix.category-Supplements 
                         .item   
                             .image  
                                 img.w-100(src="images/nitro-tech_ripped_small_1.jpg", alt="")
                             .item-body 
                                 h4 MuscleTech Nitro-Tech Ripped, 4lbs
-                                .price 
+                                //.price 
                                     h3.new 750.04
                                         sub.Currency EGP
                                     del.old 1250.00
                                         sub.Currency EGP
                                 .add 
-                                    button.btn 
+                                    a.btn(href="https://www.amazon.com/MuscleTech-Protein-Isolate-Formula-Chocolate/dp/B00M95S9YI?th=1" target="_blank") 
                                         i.fa-solid.fa-bag-shopping.fa-fw 
                                         |  Recommended
-                    .col-lg-2
+                    .col-lg-2.mix.category-Accessories
                         .item   
                             .image  
                                 img.w-100(src="images/61xfgHHNS+L._AC_SX679_.jpg", alt="")
                             .item-body 
                                 h4 Dumbbell Set, 6 In 1 Adjustable Weights Dumbbells Sets, Barbell Set with Connecting Rod for Adults Women Men Workout Fitness,Home...
-                                .price 
+                                //.price 
                                     h3.new 750.04
                                         sub.Currency EGP
                                     del.old 1250.00
                                         sub.Currency EGP
                                 .add 
-                                    button.btn 
+                                    a.btn(href="https://www.amazon.eg/-/en/Dumbbell-Adjustable-Dumbbells-Connecting-Equipment/dp/B09MNHK7S7" target="_blank") 
                                         i.fa-solid.fa-bag-shopping.fa-fw 
                                         |  Recommended
-                    .col-lg-2
+                    .col-lg-2.mix.category-Supplements 
                         .item   
                             .image  
                                 img.w-100(src="images/iso100_5lb_frpebbles_1.jpg", alt="")
                             .item-body 
                                 h4 Dymatize ISO 100 Whey Protein Powder with 25g of Hydrolyzed 100% Whey Isolate, Vanilla 5 Pound
-                                .price 
+                                //.price 
                                     h3.new 750.04
                                         sub.Currency EGP
                                     del.old 1250.00
                                         sub.Currency EGP
                                 .add 
-                                    button.btn 
+                                    a.btn(href="https://www.amazon.com/Dymatize-Protein-Isolate-Gourmet-Vanilla/dp/B00G6QHYZ6" target="_blank") 
                                         i.fa-solid.fa-bag-shopping.fa-fw 
                                         |  Recommended
 
@@ -340,27 +340,27 @@ html(lang="en")
             .container 
                 .owl-carousel
                     div.image  
-                        img(src="../images/logo/Adidas.png", alt="") 
+                        img(src="images/logo/Adidas.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Nike.png", alt="") 
+                        img(src="images/logo/Nike.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Puma.png", alt="") 
+                        img(src="images/logo/Puma.png", alt="") 
                     div.image  
-                        img(src="../images/logo/maxMuscles.png", alt="") 
+                        img(src="images/logo/maxMuscles.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Muscleandstrength-com.jpg", alt="") 
+                        img(src="images/logo/Muscleandstrength-com.jpg", alt="") 
                     div.image  
-                        img(src="../images/logo/redcon1.png", alt="") 
+                        img(src="images/logo/redcon1.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Decathlon.png", alt="") 
+                        img(src="images/logo/Decathlon.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Healthe.png", alt="") 
+                        img(src="images/logo/Healthe.png", alt="") 
                     div.image  
-                        img(src="../images/logo/HealthEasy.png", alt="") 
+                        img(src="images/logo/HealthEasy.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Salad.png", alt="") 
+                        img(src="images/logo/Salad.png", alt="") 
                     div.image  
-                        img(src="../images/logo/Better-Health.jpg", alt="") 
+                        img(src="images/logo/Better-Health.jpg", alt="") 
                     
                     
 
@@ -374,14 +374,6 @@ html(lang="en")
                     a(href='#')  Mostafa Abobakr 
                     p   &copy;  All rights reserved | 2022.
         // End Footer Copy Right
-
-
-
-
-
-
-
-
 
 
         // Start Aside bar fixed
@@ -406,10 +398,9 @@ html(lang="en")
         // End Aside bar fixed
 
 
-
-
         include includes/script.pug
-        script(src="../js/owl.carousel.min.js") 
+        script(src="js/owl.carousel.min.js") 
+        script(src="js/jquery.mixitup.min.js") 
         script.
             $(".owl-carousel").owlCarousel({
                 loop:true,
@@ -432,4 +423,4 @@ html(lang="en")
                 $(this).closest('.card-item').addClass('active').siblings().removeClass('active');
                 $('#iframeVideo').attr('src', mySrc);
             });
-        
+            $('#Container').mixItUp();
