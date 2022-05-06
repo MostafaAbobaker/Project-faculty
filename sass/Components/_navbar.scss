@@ -30,6 +30,12 @@ nav.navbar {
                     }
                 }
             }
+            &.active {
+                .nav-link {
+                    color: $Color-Master;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }

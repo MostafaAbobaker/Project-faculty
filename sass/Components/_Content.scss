@@ -265,6 +265,9 @@ main.main-section {
         position: relative;
         z-index: 3;
         color: $Color-White;
+        margin-bottom: 20px;
+        display: block;
+        text-decoration: none;
         .image {
             margin-bottom: 15px;
             img {
@@ -352,6 +355,7 @@ main.main-section {
         border: 1px solid rgba($Color-two, 0.1);
         border-radius: 5px;
         box-shadow: 0 0 10px rgba($Color-two, 0.1);
+        margin-bottom: 20px;
         .image {
             border-bottom: 1px solid rgba($Color-two, 0.1);
             background-color: $Color-White;

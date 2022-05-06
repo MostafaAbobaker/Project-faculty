@@ -1,0 +1,212 @@
+- var pageTitl = "Blog";
+doctype html
+html(lang="en")
+    head
+        link(rel="stylesheet", href="../css/owl.carousel.min.css")
+        link(rel="stylesheet", href="../css/owl.theme.default.min.css")
+        include includes/head.pug
+    body 
+        include includes/header.pug
+        
+        // Start Our Blog
+        section.our-blog 
+            .container 
+                h2.text-center Official Blog
+                .row 
+                    .col-lg-9  
+                        .Blog-details
+                            .Blog-details-img 
+                                img.w-100.rounded-lg(src="images/news-7-370x260.jpg", alt="")
+                            .Blog-details-body  
+                                h4.tilte-Blog-details  10 Tips How to Prepare Meals Fast and Easy
+                            .info
+                                small.text-muted  
+                                    i.fas.fa-user-alt
+                                    | Dr/ Ahmed Mohamed
+                                small.text-muted 
+                                    i.fas.fa-heart
+                                    | 55  Like
+                                small.text-muted 
+                                    i.fas.fa-comment-alt
+                                    | 13 Comments  
+                                small.text-muted  
+                                    i.fas.fa-folder-open
+                                    | Cardio  
+                            p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.
+                            .row.border-bottom.pb-3
+                                .col-lg-5
+                                    img.w-100.rounded-lg(src="images/blog-5-1-300x250.jpg", alt="")
+                                .col-lg-7
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat no officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                            h4.tilte-Blog-details  Push Your Fitness Further With Facilities
+                            ul.border-bottom.pb-3.mb-0
+                                li.list-item Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, quaerat
+                                li.list-item Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, 
+                                li.list-item Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                li.list-item Lorem ipsum dolor sit amet consectetur  elit.
+                            .action-post.border-bottom.mb-3
+                                .form-check.like
+                                    input#flexRadioDefault10.form-check-input(type='checkbox', name='flexRadioDefault')
+                                    label.form-check-label(for='flexRadioDefault10')
+                                        i.far.fa-thumbs-up.fa-fw.fa-lg
+                                        | Like
+                                a.Comment(href="#formComment")    
+                                    i.far.fa-comment-alt.fa-fw.fa-lg
+                                    | Comment 
+                                
+                                
+                            .chat-container.border-bottom.mb-3.pb-3  
+                                .media
+                                    img.mr-3(src='images/770137_man_512x512.png' alt='...')
+                                    .media-body
+                                        h5.mt-0 Media heading
+                                        p Standing on the frontline when the bombs start to fall. Heaven is jealous of our love, angels are crying from up above. Can&apos;t replace you with a million rings. Boy, when you&apos;re with me I&apos;ll give you a taste. There&rsquo;s no going back. Before you met me I was alright but things were kinda heavy. Heavy is the head that wears the crown.
+                                .media
+                                    img.mr-3(src='images/icon-avatar-6.png' alt='...')
+                                    .media-body
+                                        h5.mt-0 Media heading
+                                        p Standing on the frontline when the bombs start to fall. Heaven is jealous of our love, angels are crying from up above. Can&apos;t replace you with a million rings. Boy, when you&apos;re with me I&apos;ll give you a taste. There&rsquo;s no going back. Before you met me I was alright but things were kinda heavy. Heavy is the head that wears the crown.
+                            #formComment.form-Comment 
+                                h4 Post Comment
+                                form
+                                    .mb-3
+                                        input#exampleFormControlInput1.form-control(type='email' placeholder='Type your email....')
+                                    .mb-3
+                                        textarea#exampleFormControlTextarea1.form-control(rows='3' placeholder='Type your comments....')
+                                    button.btn(type='submit') 
+                                        i.far.fa-comment-alt.fa-fw.fa-lg.pr-2
+                                        | Comment
+
+
+                    .col-lg-3 
+                        .card-box 
+                            .card-list 
+                                .card-header
+                                    h5 Search for Post
+                                    .icon 
+                                        i.fas.fa-angle-down.fa-fw
+                                .card-body
+                                    //Start input Search
+                                    .input-group
+                                        input.form-control(type='text' placeholder="Search " )
+                                        button#button-addon2.btn(type='button') 
+                                            i.fas.fa-angle-down.fa-fw
+                            .card-list 
+                                .card-header
+                                    h5 Categories
+                                    .icon 
+                                        i.fas.fa-angle-down.fa-fw
+                                .card-body
+                                    ul.list-unstyled.mb-0 
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Cardio
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Strength
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Stretching
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Supplements
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Clothes
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Machines
+                                        li
+                                            span.icon 
+                                                i.far.fa-square.fa-fw
+                                            |  Other
+                            .card-list 
+                                .card-header
+                                    h5 Tags
+                                    .icon 
+                                        i.fas.fa-angle-down.fa-fw
+                                .card-body
+                                    span.badge.badge-pill Diet
+                                    span.badge.badge-pill Nutrition
+                                    span.badge.badge-pill Cardio
+                                    span.badge.badge-pill Strength
+                                    span.badge.badge-pill Stretching
+                                    span.badge.badge-pill Supplements
+                                    span.badge.badge-pill Machines
+                                             
+        // End Our Blog
+        
+
+        // Start Footer Copy Right
+        footer.copy-right
+            .container
+                .d-flex.justify-content-center
+                    p Design by   
+                    a(href='#')  Mostafa Abobakr 
+                    p   &copy;  All rights reserved | 2022.
+        // End Footer Copy Right
+
+
+
+
+
+
+
+
+
+
+        // Start Aside bar fixed
+        aside.aside-bar-fixed
+            ul.list-unstyled 
+                li 
+                    a(href="TrainingBackpain.html") 
+                        img(src="images/pain.png", alt="")
+                        span.text Back pain
+                li 
+                    a(href="TrainingRoughness.html") 
+                        img(src="images/pain-in-joints.png", alt="")
+                        span.text Roughness
+                li 
+                    a(href="DietObese.html") 
+                        img(src="images/fat.png", alt="")
+                        span.text Obese
+                li 
+                    a(href="") 
+                        img(src="images/body-variant.png", alt="")
+                        span.text Thinness
+        // End Aside bar fixed
+
+
+
+
+        include includes/script.pug
+        script(src="../js/owl.carousel.min.js") 
+        script.
+            $(".owl-carousel").owlCarousel({
+                loop:true,
+                margin:10,
+                nav:true,
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    600:{
+                        items:3
+                    },
+                    1000:{
+                        items:5
+                    }
+                }
+            });
+            $('.card-item .play-icon').click(function (){
+                var mySrc =  $(this).attr('data-video');
+                $(this).closest('.card-item').addClass('active').siblings().removeClass('active');
+                $('#iframeVideo').attr('src', mySrc);
+            });
+        

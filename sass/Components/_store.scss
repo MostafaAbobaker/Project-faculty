@@ -1,0 +1,106 @@
+// Start Big-Store
+.Big-Store {
+    &.store-page {
+        h2 {
+            font-size: 32px;
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 0;
+            position: relative;
+            z-index: 2;
+            &::before {
+                content: 'Store';
+                position: absolute;
+                top: -20px;
+                inset-inline-start: 50%;
+                transform: translateX(-50%);
+                font-size: 30px;
+                font-weight: bold;
+                color: $Color-Master;
+                font-family: "great sejagad";
+            }
+        }
+    }
+    .card-box {
+        background-color: $Color-White;
+        border: 1px solid rgba($Color-two, 0.1);
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba($Color-two, 0.1);
+        margin-bottom: 20px;
+        padding: 10px;
+        border-radius: 10px;
+        /* color: #fff; */
+        position: relative;
+        z-index: 9;
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            border-bottom: 1px solid rgba($Color-White, 0.2);
+            h5 {
+                margin: 0;
+                font-size: 15px;
+                font-weight: bold;
+            }
+            .icon {
+                cursor: pointer;
+                i {
+                    transition: all 0.4s ease-in-out;
+                }
+                &.rotate {
+                    i {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+        .card-body {
+            padding: 10px;
+            .input-group {
+                #button-addon2 {
+                    background-color: rgba($Color-Master, 1);
+                    color: #fff;
+                }
+            }
+            .list-Categories {
+                li {
+                    cursor: pointer;
+                    &.active {
+                        color: rgba($Color-Master, 1);
+                        transition: all .4s ease-in-out;
+                        .icon {
+                            i {
+                                &::before {
+                                    content: '\f14a';
+                                    font-weight: 900;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .badge {
+                color: #333;
+                background-color: #f2f2f2;
+                margin-right: 10px;
+                margin-bottom: 10px;
+                border-radius: 25px;
+                padding: 7px 15px;
+                transition: all 0.4s ease-in-out;
+                cursor: pointer;
+                &:hover {
+                    background-color: $Color-Master;
+                    box-shadow: 0 0 15px rgba($Color-Master, 0.5);
+                    color: #fff;
+                }
+                &.active {
+                    background-color: rgba($Color-Master, 1);
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+// End Big-Store
