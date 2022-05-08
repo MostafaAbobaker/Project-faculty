@@ -1,0 +1,78 @@
+- var pageTitl = "Quotes";
+html(lang="en")
+    head
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css")
+        include includes/head.pug
+    body 
+        include includes/asideBar.pug
+        section.overview 
+            .container-fluid 
+                .row 
+                    .col-lg-12
+                        .content-chart 
+                            .header 
+                                h3.heading Quotes 
+                            .container.Quotes-page
+                                //-.Quotes-box
+                                    h2 Quotes
+                                    p.text Genius is one percent inspiration and ninety-nine percent perspiration.
+                                    small.author Thomas Edison
+                                div.slider.slider-nav
+                                    fetch("https://type.fit/api/quotes")
+                                    .then(function(response) {
+                                            return response.json();
+                                        }).then(function(data) {
+                                            for(var i =0 ; i < 10; i++) {
+                                                $(".slick-list .slick-track").append('<div class=" Quotes-box"><h2>Quotes</h2><p class="text">' + data[i].text + '</p><small class="author">' + data[i].author + '</small></div>');
+                                            }
+
+                                    });
+       
+                         
+
+
+
+        include includes/script.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js") 
+        //-script.
+            fetch("https://type.fit/api/quotes")
+                .then(function(response) {
+                        return response.json();
+                    }).then(function(data) {
+                        for(var i =0 ; i < 10; i++) {
+                            $(".slick-list .slick-track").append('<div class=" Quotes-box"><h2>Quotes</h2><p class="text">' + data[i].text + '</p><small class="author">' + data[i].author + '</small></div>');
+                            
+                        }
+
+                        //- console.log('quotes data');
+                        //-     console.log(data);
+                });
+
+        script. 
+        
+            $('.slider-nav').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                    }
+                ]
+            });

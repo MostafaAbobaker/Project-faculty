@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap");
 .header-top {
   background-color: #262626;
   padding: 5px;
@@ -1765,6 +1766,86 @@ section.our-blog .Blog-details .chat-container .media .media-body::before {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
+.Quotes-page .Quotes-box {
+  width: 500px;
+  background-color: #27293D;
+  padding: 50px;
+  padding-bottom: 20px;
+  position: relative;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+  margin-bottom: 30px;
+  height: 300px;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  color: #bbb;
+  filter: blur(2px);
+}
+.Quotes-page .Quotes-box h2 {
+  position: absolute;
+  top: -20px;
+  font-size: 72px;
+  inset-inline-end: 15px;
+  font-family: fantasy;
+  text-shadow: 0 20px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+  font-size: 42px;
+}
+.Quotes-page .Quotes-box p.text {
+  font-size: 32px;
+  letter-spacing: 1px;
+  font-family: "Oleo Script", cursive;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 30px;
+  width: 100%;
+}
+.Quotes-page .Quotes-box p.text::before {
+  content: "";
+  position: absolute;
+  font: var(--fa-font-solid);
+  inset-inline-start: -50px;
+  top: -45px;
+  font-size: 50px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.Quotes-page .Quotes-box p.text::after {
+  content: "";
+  position: absolute;
+  font: var(--fa-font-solid);
+  inset-inline-end: -50px;
+  bottom: -20px;
+  font-size: 50px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.Quotes-page .Quotes-box small.author {
+  display: block;
+  text-align: end;
+  font-family: "great sejagad";
+  font-size: 35px;
+  width: 100%;
+}
+.Quotes-page .slick-slide.slick-center .Quotes-box {
+  background-image: linear-gradient(135deg, #7ba62c 0%, #5A7E2C 100%);
+  transform: scale(1.2);
+  z-index: 999;
+  color: #fff;
+  filter: blur(0);
+}
+.Quotes-page .slick-slide.slick-center .Quotes-box h2 {
+  font-size: 72px;
+  top: -45px;
+}
+.Quotes-page .slick-slider {
+  height: 85vh;
+}
+.Quotes-page .slick-slider .slick-track {
+  display: flex;
+  align-items: center;
+  padding-top: 150px;
+}
 /* Start .box-Training  */
 .box-Training {
   background-color: #27293D;

@@ -129,33 +129,85 @@ html(lang="en")
                         .d-flex
                             .w-50.p-2.box-Change-Exercise
                                 .box-Training
-                                    .card-list 
-                                        h5.px-3.pt-2.mb-0.border-bottom.pb-2 Change Nutrition
-                                        .card-body 
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/1.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 The Secret to Authentic Italian Bolognese Sauce
-                                                        span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
-                                                        .weight 
-                                                            span.weight-number 250 mg
-                                                            span.calaries 581 kci
-                                                    a.play-icon(href="") 
-                                                        i.fas.fa-exchange-alt.fa-fw.fa-lg
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/2.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Eggs, But Dress Them Up & Make Them Fancy.
-                                                        span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
-                                                        .weight 
-                                                            span.weight-number 250 mg
-                                                            span.calaries 581 kci
-                                                    a.play-icon(href="") 
-                                                        i.fas.fa-exchange-alt.fa-fw.fa-lg
+                                    .card-list.pb-0
+                                        ul#myTab.nav.nav-tabs.border-0.p-1.py-2(role='tablist')
+                                            li.nav-item(role='presentation')
+                                                button#home-tab.nav-link.active(data-bs-toggle='tab', data-bs-target='#home', type='button', role='tab', aria-controls='home', aria-selected='true') Ingredients
+                                            li.nav-item(role='presentation')
+                                                button#profile-tab.nav-link(data-bs-toggle='tab', data-bs-target='#profile', type='button', role='tab', aria-controls='profile', aria-selected='false') Change Meal
+                                        #myTabContent.tab-content.card-body.pb-0 
+                                            #home.tab-pane.fade.show.active.p-2.pb-0(role='tabpanel', aria-labelledby='home-tab' ) 
+                                                .box-Ingredients.d-flex.flex-column.flex-wrap.pb-0(style="max-height:350px")
+                                                    h5 Meat
+                                                    ul.list-unstyled.mb-2 
+                                                        li 1 lb Ground beef
+                                                        li 1 lb Italian sausage
+                                                    h5 Produce
+                                                    ul.list-unstyled.mb-2  
+                                                        li 2 Bay leaves
+                                                        li 2 Carrots
+                                                        li 2 Celery
+                                                        li 6 cloves Garlic
+                                                        li 1 Lemon, Zest of
+                                                        li  1 Onion, red
+                                                        li 2 cups Tomatoes
+                                                        li 15 oz Tomatoes, fire roasted
+                                                    h5 Condiments
+                                                    ul.list-unstyled.mb-2  
+                                                        li 1 squeeze Lemon juice
+                                                        li 2 cans Tomato sauce
+                                                    h5 Baking & Spices
+                                                    ul.list-unstyled.mb-2  
+                                                        li 1 dash Nutmeg
+                                                    h5 Oils & Vinegars
+                                                    ul.list-unstyled 
+                                                        li 1 tbsp Olive oil
+                                                    h5 Dairy
+                                                    ul.list-unstyled.mb-2 
+                                                        li 1 tbsp Butter
+                                                        li 1/4 cup Cream
+                                                        li 1/4 cup Milk
+                                                        li 1 Parmesan cheese
+                                                    h5 Beer, Wine & Liquor
+                                                    ul.list-unstyled.mb-2 
+                                                        li 1 dash Cooking wine
+                                                    h5 Other
+                                                    ul.list-unstyled.mb-2 
+                                                        li Salt and Sepper (to taste)
+                                                 
+
+                                                        
+
+
+                                                
+                                            #profile.tab-pane.fade.pb-0(role='tabpanel', aria-labelledby='profile-tab') 
+                                                .card-item 
+                                                    .image 
+                                                        img.w-100(src="images/Training/1.png", alt="")
+                                                    .card-item-body 
+                                                        .info 
+                                                            h5 The Secret to Authentic Italian Bolognese Sauce
+                                                            span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                            .weight 
+                                                                span.weight-number 250 mg
+                                                                span.calaries 581 kci
+                                                        a.play-icon(href="") 
+                                                            i.far.fa-play-circle.fa-fw.fa-2x
+                                                .card-item 
+                                                    .image 
+                                                        img.w-100(src="images/Training/2.png", alt="")
+                                                    .card-item-body 
+                                                        .info 
+                                                            h5 Eggs, But Dress Them Up & Make Them Fancy.
+                                                            span cream-laced baked egg recipe is an easy and luxurious way to enjoy brunch at home.
+                                                            .weight 
+                                                                span.weight-number 250 mg
+                                                                span.calaries 581 kci
+                                                        a.play-icon(href="") 
+                                                            i.far.fa-play-circle.fa-fw.fa-2x
+
+
+
 
 
 

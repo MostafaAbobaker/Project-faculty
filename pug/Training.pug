@@ -19,179 +19,99 @@ html(lang="en")
                                 li.link-list Thurs
                                 li.link-list Fri
                                 
+                            .box-Training-body    
+                                .card-list 
+                                    .card-header
+                                        h5 Cardio
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item.active
+                                            .image 
+                                                img.w-100(src="images/Training/Mask Group 23.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Light Treadmill Walk
+                                                    span 20 minute
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/Mask Group 24.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Carbon EL Elliptical
+                                                    span 10 minute
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
                                 
-                            ul#pills-tab.nav.nav-pills(role='tablist')
-                                li.nav-item(role='presentation')
-                                    #pills-home-tab.nav-link.active(data-bs-toggle='pill', data-bs-target='#pills-home', role='tab', aria-controls='pills-home', aria-selected='true') 
-                                        i.fas.fa-home.fa-fw
-                                        | Home
-                                li.nav-item(role='presentation')
-                                    #pills-profile-tab.nav-link(data-bs-toggle='pill', data-bs-target='#pills-profile', role='tab', aria-controls='pills-profile', aria-selected='false') 
-                                        i.fas.fa-dumbbell.fa-fw
-                                        | Gym
-                                
-                            #pills-tabContent.tab-content.box-Training-body.box-Training-body.for-tabs
-                                #pills-home.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='pills-home-tab')
-
-                                    .card-list 
-                                        .card-header
-                                            h5 Cardio
-                                            .icon 
-                                                i.fas.fa-angle-down.fa-fw
-                                        .card-body
-                                            .card-item.active
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 23.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Light Treadmill Walk
-                                                        span 20 minute
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 24.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Carbon EL Elliptical
-                                                        span 10 minute
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                    
-                                    .card-list    
-                                        .card-header
-                                            h5 Strength 
-                                            .icon 
-                                                i.fas.fa-angle-down.fa-fw
-                                        .card-body
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 27.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Split Lunge with Bicep Curl 
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 28.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Standing Alternating Dumbbell Shoulder Press
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 31.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Lat Pulldown
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 32.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Barbell Bench Press
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                    .card-list     
-                                        .card-header
-                                            h5 Stretching
-                                            .icon 
-                                                i.fas.fa-angle-down.fa-fw
-                                        .card-body
-                                            .card-item
-                                                .image 
-                                                    img.w-100(src="images/hqdefault.webp", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Standing Hamstring Stretch
-                                                        span 30 seconds
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/hq720.webp", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Spinal twist
-                                                        span 30 seconds
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                #pills-profile.tab-pane.fade(role='tabpanel', aria-labelledby='pills-profile-tab') 
-                                    .card-list 
-                                        .card-header
-                                            h5 Cardio
-                                            .icon 
-                                                i.fas.fa-angle-down.fa-fw
-                                        .card-body
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 23.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Light Treadmill Walk
-                                                        span 20 minute
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 24.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Carbon EL Elliptical
-                                                        span 10 minute
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                    .card-list    
-                                        .card-header
-                                            h5 Strength 
-                                            .icon 
-                                                i.fas.fa-angle-down.fa-fw
-                                        .card-body
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 27.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Split Lunge with Bicep Curl 
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 28.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Standing Alternating Dumbbell Shoulder Press
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 31.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Lat Pulldown
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-                                            .card-item 
-                                                .image 
-                                                    img.w-100(src="images/Training/Mask Group 32.png", alt="")
-                                                .card-item-body 
-                                                    .info 
-                                                        h5 Barbell Bench Press
-                                                        span 10 x 3
-                                                    a.play-icon(href="") 
-                                                        i.far.fa-play-circle.fa-fw.fa-2x
-
+                                .card-list    
+                                    .card-header
+                                        h5 Strength 
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/Mask Group 27.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Split Lunge with Bicep Curl 
+                                                    span 10 x 3
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/Mask Group 28.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Standing Alternating Dumbbell Shoulder Press
+                                                    span 10 x 3
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/Mask Group 31.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Lat Pulldown
+                                                    span 10 x 3
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/Training/Mask Group 32.png", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Barbell Bench Press
+                                                    span 10 x 3
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                .card-list     
+                                    .card-header
+                                        h5 Stretching
+                                        .icon 
+                                            i.fas.fa-angle-down.fa-fw
+                                    .card-body
+                                        .card-item
+                                            .image 
+                                                img.w-100(src="images/hqdefault.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Standing Hamstring Stretch
+                                                    span 30 seconds
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                                        .card-item 
+                                            .image 
+                                                img.w-100(src="images/hq720.webp", alt="")
+                                            .card-item-body 
+                                                .info 
+                                                    h5 Spinal twist
+                                                    span 30 seconds
+                                                a.play-icon(href="") 
+                                                    i.far.fa-play-circle.fa-fw.fa-2x
+                            
        
                     .col-lg-8    
                         .slide-show
@@ -212,14 +132,14 @@ html(lang="en")
                                             span 10 x 3
                                         
                                 .button-groub 
-                                        button.btn.btn.btn-success.rounded-pill.btn-sm.px-3 Start 
+                                        //-button.btn.btn.btn-success.rounded-pill.btn-sm.px-3 Start 
                                         button#btnChangeExercise.btn.btn-outline-warning.rounded-pill.btn-sm
                                             i.fas.fa-exchange-alt.fa-fw
                                             | Change Exercise
                                         button#btnFadeBack.btn.btn-outline-primary.rounded-pill.btn-sm
                                             i.fas.fa-undo.fa-fw
                                             | Fade back
-                            .progress
+                            //-.progress
                                 .progress-bar.progress-bar-striped.bg-success(role='progressbar', style='width: 25%', aria-valuenow='25', aria-valuemin='0', aria-valuemax='100')
                         .d-flex
                             .w-50.p-2.box-Change-Exercise

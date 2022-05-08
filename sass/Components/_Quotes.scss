@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap');
+.Quotes-page {
+    // display: flex;
+    // width: 100%;
+    // height: 85vh;
+    // align-items: center;
+    // justify-content: space-between;
+    // flex-wrap: wrap;
+    .Quotes-box {
+        width: 500px;
+        background-color: #27293D;
+        padding: 50px;
+        padding-bottom: 20px;
+        position: relative;
+        box-shadow: 0 0 30px rgba(#000, .8);
+        margin-bottom: 30px;
+        height: 300px;
+        transition: all 0.4s ease-in-out;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        color: #bbb;
+        filter: blur(2px);
+        h2 {
+            position: absolute;
+            top: -20px;
+            font-size: 72px;
+            inset-inline-end: 15px;
+            font-family: fantasy;
+            text-shadow: 0 20px 10px rgb(0 0 0 / 50%);
+            letter-spacing: 2px;
+            font-size: 42px;
+        }
+        p.text {
+            font-size: 32px;
+            letter-spacing: 1px;
+            font-family: 'Oleo Script', cursive;
+            font-weight: bold;
+            position: relative;
+            margin-bottom: 30px;
+            width: 100%;
+            &::before {
+                content: '\f10d';
+                position: absolute;
+                font: var(--fa-font-solid);
+                inset-inline-start: -50px;
+                top: -45px;
+                font-size: 50px;
+                text-shadow: 10px 10px 10px rgba(0, 0, 0, .50);
+            }
+            &::after {
+                content: '\f10e';
+                position: absolute;
+                font: var(--fa-font-solid);
+                inset-inline-end: -50px;
+                bottom: -20px;
+                font-size: 50px;
+                text-shadow: 10px 10px 10px rgba(0, 0, 0, .50);
+            }
+        }
+        small.author {
+            display: block;
+            text-align: end;
+            font-family: "great sejagad";
+            font-size: 35px;
+            width: 100%;
+        }
+    }
+    .slick-slide {
+        &.slick-cloned {
+            // .Quotes-box {
+            //     background-color: #27293D!important;
+            // }
+        }
+        &.slick-center {
+            .Quotes-box {
+                // background-color: #7ba62c!important;
+                background-image: linear-gradient(135deg, #7ba62c 0%, #5A7E2C 100%);
+                transform: scale(1.2);
+                z-index: 999;
+                color: #fff;
+                filter: blur(0);
+                h2 {
+                    font-size: 72px;
+                    top: -45px;
+                }
+            }
+        }
+    }
+    .slick-slider {
+        height: 85vh;
+        .slick-track {
+            display: flex;
+            align-items: center;
+            padding-top: 150px;
+            .slick-active.slick-center {}
+        }
+    }
+}

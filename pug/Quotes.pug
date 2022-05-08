@@ -1,23 +1,128 @@
 - var pageTitl = "Quotes";
 html(lang="en")
     head
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css")
         include includes/head.pug
     body 
         include includes/asideBar.pug
         section.overview 
             .container-fluid 
                 .row 
-                    .col-lg-9
+                    .col-lg-12
                         .content-chart 
                             .header 
                                 h3.heading Quotes 
-                                .your-gool 
-                                    h5.title 	ONLY 3 MONTHS AND 15 DAYS		
-                                    small 	 UNTIL YOU REACH YOUR GOAL!					
+                            .container.Quotes-page
+                                //-.Quotes-box
+                                    h2 Quotes
+                                    p.text Genius is one percent inspiration and ninety-nine percent perspiration.
+                                    small.author Thomas Edison
+                                div.slider.slider-nav
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Genius is one percent inspiration and ninety-nine percent perspiration.
+                                            small.author Thomas Edison
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text You can observe a lot just by watching
+                                            small.author Yogi Berra
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Genius is one percent inspiration and ninety-nine percent perspiration.
+                                            small.author Thomas Edison
+
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text A house divided against itself cannot stand.
+                                            small.author Abraham Lincoln
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Difficulties increase the nearer we get to the goal.
+                                            small.author Johann Wolfgang von Goethe
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Fate is in your hands and no one elses
+                                            small.author Byron Pulsifer
+			
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Be the chief but never the lord.
+                                            small.author Lao Tzu
+
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Nothing happens unless first we dream.
+                                            small.author Carl Sandburg
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Well begun is half done.
+                                            small.author Aristotle
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Life is a learning experience, only if you learn.
+                                            small.author Yogi Berra
+                                    div
+                                        .Quotes-box
+                                            h2 Quote
+                                            p.text Self-complacency is fatal to progress.
+                                            small.author Margaret Sangster
 			
        
-                    .col-lg-3       
+                         
 
 
 
         include includes/script.pug
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js") 
+        script.
+            fetch("https://type.fit/api/quotes")
+                .then(function(response) {
+                        return response.json();
+                    }).then(function(data) {
+                        for(var i =0 ; i < 10; i++) {
+                            //-$(".slick-list .slick-track").append('<div class=" Quotes-box"><h2>Quotes</h2><p class="text">' + data[i].text + '</p><small class="author">' + data[i].author + '</small></div>');
+                            console.log(data[i].text);
+                            console.log(data[i].author);
+                        }
+
+                        //- console.log('quotes data');
+                        //-     console.log(data);
+                });
+
+        script. 
+            $('.slider-nav').slick({
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                    breakpoint: 768,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 3
+                    }
+                    },
+                    {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                    }
+                ]
+            });
